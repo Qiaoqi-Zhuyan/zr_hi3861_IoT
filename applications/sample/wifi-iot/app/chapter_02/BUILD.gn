@@ -1,0 +1,12 @@
+
+static_library("chapter_02") 
+{
+    sources = [
+        "hello_world.c"
+    ]
+
+    include_dirs = [
+        "//utils/native/lite/include"
+    ]
+}
+

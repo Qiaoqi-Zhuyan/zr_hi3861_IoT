@@ -1,0 +1,28 @@
+static_library("task5") 
+{
+    sources = 
+    [
+        "wifi_utils.c",
+        "mqtt_utils.c",
+        "main.c",
+        "oled_ssd1306.c",
+        "aht20.c",
+        "gas_measure.c",
+        "temp_humi_measure.c",
+        "mqtt_task.c",
+        "oled_task.c",
+        "mq.c"
+    ]
+
+    include_dirs = 
+    [
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/components/cmsis/2.0",
+        "//base/iot_hardware/interfaces/kits/wifiiot_lite",
+        "//vendor/hisi/hi3861/hi3861/third_party/lwip_sack/include",
+        "//foundation/communication/interfaces/kits/wifi_lite/wifiservice",
+        "//third_party/pahomqtt/MQTTPacket/src",
+        "//third_party/pahomqtt/MQTTPacket/samples",
+        "//vendor\hisi\hi3861\hi3861\components\at\src"
+    ]
+}
