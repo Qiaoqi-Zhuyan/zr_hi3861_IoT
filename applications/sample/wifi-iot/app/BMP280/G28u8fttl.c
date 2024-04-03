@@ -346,8 +346,10 @@ void NMEA_GNGGA_Analysis(nmea_msg *gpsx,uint8_t *buf)
 	(void)posx, (void)dx;
 	(void)temp, (void)rs;
 
-
+	
+	printf("\r\nfirst head: %s", buf);
 	p1=(uint8_t* )strstr((const char *)buf,"$GNGGA");
+	
 
 	name = strsep((char **)&p1, ",");						//获取名称
 	utc = strsep((char **)&p1, ",");							//获取UTC时间
@@ -565,10 +567,10 @@ int GPS_Init(void)
 {
     int ret = 0;
 	GpioInit();
-	// IoSetFunc(HI_IO_NAME_GPIO_12, HI_IO_FUNC_GPIO_12_UART2_RXD);
-	// IoSetFunc(HI_IO_NAME_GPIO_11, HI_IO_FUNC_GPIO_11_UART2_TXD);
-	IoSetFunc(GPS_UART_TX, HI_IO_FUNC_GPIO_12_UART2_RXD);
-	IoSetFunc(GPS_UART_RX, HI_IO_FUNC_GPIO_11_UART2_TXD);
+	IoSetFunc(HI_IO_NAME_GPIO_12, HI_IO_FUNC_GPIO_12_UART2_RXD);
+	IoSetFunc(HI_IO_NAME_GPIO_11, HI_IO_FUNC_GPIO_11_UART2_TXD);
+	// IoSetFunc(GPS_UART_TX, HI_IO_FUNC_GPIO_12_UART2_RXD);
+	// IoSetFunc(GPS_UART_RX, HI_IO_FUNC_GPIO_11_UART2_TXD);
 
     hi_uart_attribute uart_attr = {
         .baud_rate = GPS_UART_BAUDRATE, /* baud_rate: 9600 */

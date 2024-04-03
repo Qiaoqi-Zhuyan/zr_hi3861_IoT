@@ -10,13 +10,13 @@ build build.ninja: gn
 
 subninja toolchain.ninja
 
-build BMP280: phony ./libs/libBMP280.a
 build acts: phony obj/test/xts/acts/acts.stamp
 build acts_compoment: phony obj/test/xts/acts/acts_compoment.stamp
 build app: phony obj/applications/sample/wifi-iot/app/app.stamp
 build authmanager: phony ./libs/libauthmanager.a
 build bootstrap: phony ./libs/libbootstrap.a
 build broadcast: phony ./libs/libbroadcast.a
+build chapter_06: phony ./libs/libchapter_06.a
 build cjson_ndk: phony obj/third_party/cJSON/cjson_ndk.stamp
 build cjson_shared: phony obj/third_party/cJSON/cjson_shared.stamp
 build cjson_static: phony ./libs/libcjson_static.a
@@ -66,8 +66,8 @@ build wifiservice_ndk: phony obj/vendor/hisi/hi3861/hi3861_adapter/hals/communic
 build xdevice: phony obj/test/xdevice/xdevice.stamp
 build applications/sample/wifi-iot/app$:app: phony obj/applications/sample/wifi-iot/app/app.stamp
 build applications/sample/wifi-iot/app: phony obj/applications/sample/wifi-iot/app/app.stamp
-build applications/sample/wifi-iot/app/BMP280$:BMP280: phony ./libs/libBMP280.a
-build applications/sample/wifi-iot/app/BMP280: phony ./libs/libBMP280.a
+build applications/sample/wifi-iot/app/chapter_06$:chapter_06: phony ./libs/libchapter_06.a
+build applications/sample/wifi-iot/app/chapter_06: phony ./libs/libchapter_06.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite: phony ./libs/libhilog_lite.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite_ndk: phony obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp
 build base/hiviewdfx/services/hiview_lite$:hiview_lite: phony ./libs/libhiview_lite.a
@@ -145,7 +145,7 @@ build vendor/huawei/wifi-iot/hals/utils/token$:hal_token_static: phony ./libs/li
 
 build all: phony $
     obj/applications/sample/wifi-iot/app/app.stamp $
-    ./libs/libBMP280.a $
+    ./libs/libchapter_06.a $
     ./libs/libhilog_lite.a $
     obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp $
     ./libs/libhiview_lite.a $

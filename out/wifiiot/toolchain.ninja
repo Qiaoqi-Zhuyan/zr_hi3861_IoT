@@ -33,8 +33,8 @@ rule copy
   command = cp -afd ${in} ${out}
   description = COPY ${in} ${out}
 
-build obj/applications/sample/wifi-iot/app/app.stamp: stamp ./libs/libBMP280.a
-subninja obj/applications/sample/wifi-iot/app/BMP280/BMP280.ninja
+build obj/applications/sample/wifi-iot/app/app.stamp: stamp ./libs/libchapter_06.a
+subninja obj/applications/sample/wifi-iot/app/chapter_06/chapter_06.ninja
 subninja obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite.ninja
 build obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp: stamp ./libs/libhilog_lite.a
 subninja obj/base/hiviewdfx/services/hiview_lite/hiview_lite.ninja

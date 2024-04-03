@@ -13,7 +13,7 @@
 
 static_library("BMP280") {
     sources = [
-        #"bmp280.c",
+        "bmp280.c",
         "G28u8fttl.c"
     ]
 
