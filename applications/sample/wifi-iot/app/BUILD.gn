@@ -16,6 +16,6 @@ import("//build/lite/config/component/lite_component.gni")
 lite_component("app") 
 {
     features = [
-        "chapter_24:chapter_24"
+        "BMP280:BMP280"
     ]
 }
