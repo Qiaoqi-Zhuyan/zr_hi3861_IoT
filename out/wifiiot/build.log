@@ -1,19 +1,549 @@
-Done. Made 60 targets from 54 files in 191ms
+Done. Made 60 targets from 54 files in 302ms
 ninja: Entering directory `/home/ubuntu/sharefolder/code-1.0/out/wifiiot'
-[1/213] cross compiler obj/base/hiviewdfx/frameworks/hilog_lite/mini/hiview_log_limit.o
-[2/213] cross compiler obj/base/hiviewdfx/frameworks/hilog_lite/mini/hiview_log.o
-[3/213] cross compiler obj/foundation/communication/services/softbus_lite/authmanager/source/bus_manager.o
-[4/213] cross compiler obj/applications/sample/wifi-iot/app/chapter_06/oled_demo.o
-FAILED: obj/applications/sample/wifi-iot/app/chapter_06/oled_demo.o 
-riscv32-unknown-elf-gcc -D_XOPEN_SOURCE=700 -DLOS_COMPILE_LDM -DPRODUCT_USR_SOFT_VER_STR=\"None\" -DCYGPKG_POSIX_SIGNALS -D__ECOS__ -D__RTOS_ -DPRODUCT_CFG_HAVE_FEATURE_SYS_ERR_INFO -D__LITEOS__ -DLIB_CONFIGURABLE -DLOSCFG_SHELL -DLOSCFG_CACHE_STATICS -DCUSTOM_AT_COMMAND -DLOS_COMPILE_LDM -DLOS_CONFIG_IPERF3 -DCMSIS_OS_VER=2 -DSECUREC_ENABLE_SCANF_FILE=0 -DCONFIG_AT_COMMAND -DPRODUCT_CFG_CHIP_VER_STR=\"Hi3861V100\" -DCHIP_VER_Hi3861 -DPRODUCT_CFG_SOFT_VER_STR=\"Hi3861\" -DHI_BOARD_ASIC -DHI_ON_FLASH -DLITEOS_WIFI_IOT_VERSION -D__LITEOS__ -D__LITEOS_RISCV__ -I../../utils/native/lite/include -I../../kernel/liteos_m/components/cmsis/2.0 -I../../base/iot_hardware/interfaces/kits/wifiiot_lite -I../../vendor/hisi/hi3861/hi3861/include -I../../vendor/hisi/hi3861/hi3861/platform/include -I../../vendor/hisi/hi3861/hi3861/platform/system/include -I../../vendor/hisi/hi3861/hi3861/config -I../../vendor/hisi/hi3861/hi3861/config/nv -I../../utils/native/lite/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/kernel/base/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/targets/hi3861v100/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/kernel/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/arch/risc-v/rv32im -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libm/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libsec/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/net/wpa_supplicant-2.7/src/common -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/targets/hi3861v100/plat/riscv -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/kernel/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/kernel/extended/runstop -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/posix/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/linux/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/net/lwip_sack/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libc/musl/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libc/musl/arch/generic -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libc/musl/arch/riscv32 -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libc/hw/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libc/nuttx/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libsec/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/targets/hi3861v100/config -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/targets/hi3861v100/user -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/targets/hi3861v100/plat -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/targets/hi3861v100/extend/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/arch -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/components/lib/libc/bionic/libm -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/shell/include -I../../vendor/hisi/hi3861/hi3861/platform/os/Huawei_LiteOS/net/telnet/include -nostdlib -fno-common -fno-builtin -fno-strict-aliasing -fsigned-char -Werror -falign-functions=2 -msave-restore -fno-optimize-strlen -freorder-blocks-algorithm=simple -fno-schedule-insns -fno-inline-small-functions -fno-inline-functions-called-once -mtune=size -mno-small-data-limit=0 -fno-aggressive-loop-optimizations -std=c99 -Wpointer-arith -Wstrict-prototypes -fstack-protector-all -Os -ffunction-sections -fdata-sections -fno-exceptions -fno-short-enums -Wextra -Wall -Wundef -U PRODUCT_CFG_BUILD_TIME -mabi=ilp32 -march=rv32imc -fPIE -std=c99 -c ../../applications/sample/wifi-iot/app/chapter_06/oled_demo.c -o obj/applications/sample/wifi-iot/app/chapter_06/oled_demo.o
-../../applications/sample/wifi-iot/app/chapter_06/oled_demo.c: In function 'Oled_Task':
-../../applications/sample/wifi-iot/app/chapter_06/oled_demo.c:56:13: error: implicit declaration of function 'WriteData' [-Werror=implicit-function-declaration]
-             WriteData(qr_code[i]);
-             ^~~~~~~~~
-cc1: all warnings being treated as errors
-[5/213] cross compiler obj/base/hiviewdfx/services/hiview_lite/hiview_service.o
-[6/213] cross compiler obj/foundation/communication/services/softbus_lite/authmanager/source/wifi_auth_manager.o
-[7/213] cross compiler obj/base/hiviewdfx/utils/lite/hiview_config.o
-[8/213] cross compiler obj/base/hiviewdfx/frameworks/hilog_lite/mini/hiview_output_log.o
-[9/213] cross compiler obj/applications/sample/wifi-iot/app/chapter_06/oled_ssd1306.o
-ninja: build stopped: subcommand failed.
+[1/214] cross compiler obj/base/hiviewdfx/frameworks/hilog_lite/mini/hiview_log_limit.o
+[2/214] cross compiler obj/applications/sample/wifi-iot/app/ssd1306/ssd1306_fonts.o
+[3/214] cross compiler obj/base/hiviewdfx/services/hiview_lite/hiview_service.o
+[4/214] AR libs/libhiview_lite.a
+[5/214] cross compiler obj/base/hiviewdfx/utils/lite/hiview_config.o
+[6/214] cross compiler obj/applications/sample/wifi-iot/app/ssd1306/oled_demo.o
+[7/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_adc.o
+[8/214] cross compiler obj/base/hiviewdfx/frameworks/hilog_lite/mini/hiview_output_log.o
+[9/214] cross compiler obj/applications/sample/wifi-iot/app/ssd1306/ssd1306.o
+[10/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_kal.o
+[11/214] cross compiler obj/base/hiviewdfx/frameworks/hilog_lite/mini/hiview_log.o
+[12/214] AR libs/libssd1306.a
+[13/214] cross compiler obj/foundation/communication/services/softbus_lite/authmanager/source/wifi_auth_manager.o
+[14/214] AR libs/libhilog_lite.a
+[15/214] STAMP obj/applications/sample/wifi-iot/app/app.stamp
+[16/214] STAMP obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp
+[17/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/reset.o
+[18/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_flash.o
+[19/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_gpio.o
+[20/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/lowpower.o
+[21/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_watchdog.o
+[22/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_partition.o
+[23/214] cross compiler obj/base/hiviewdfx/utils/lite/hiview_cache.o
+[24/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/auth_info/add_auth_info.o
+[25/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/auth_info/exchange_auth_info.o
+[26/214] cross compiler obj/base/hiviewdfx/utils/lite/hiview_util.o
+[27/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/auth_info/remove_auth_info_client.o
+[28/214] cross compiler obj/base/hiviewdfx/utils/lite/hiview_file.o
+[29/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/auth_info/auth_info.o
+[30/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_i2c.o
+[31/214] AR libs/libcommon_lite.a
+[32/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_i2s.o
+[33/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_at.o
+[34/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_uart.o
+[35/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_pwm.o
+[36/214] STAMP obj/build/lite/ndk.stamp
+[37/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_sdio.o
+[38/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/auth_info/add_auth_info_client.o
+[39/214] cross compiler obj/base/iot_hardware/frameworks/wifiiot_lite/src/wifiiot_spi.o
+[40/214] AR libs/libiothardware.a
+[41/214] STAMP obj/base/iot_hardware/frameworks/wifiiot_lite/src/iothardware_ndk.stamp
+[42/214] cross compiler obj/base/startup/services/bootstrap_lite/source/bootstrap_service.o
+[43/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/auth_info/exchange_auth_info_client.o
+[44/214] cross compiler obj/foundation/communication/services/softbus_lite/authmanager/source/auth_conn.o
+[45/214] cross compiler obj/foundation/communication/services/softbus_lite/authmanager/source/msg_get_deviceid.o
+[46/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/key_agreement.o
+[47/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/key_agreement_client.o
+[48/214] cross compiler obj/foundation/communication/services/softbus_lite/authmanager/source/auth_interface.o
+[49/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/json/commonutil.o
+[50/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/json/jsonutil.o
+[51/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/sec_clone_server.o
+[52/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/key_agreement_server.o
+[53/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/pake_server.o
+[54/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/log/log.o
+[55/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/sts_client.o
+[56/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/pake_client.o
+[57/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/hichain.o
+[58/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/add_auth_info_request.o
+[59/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/add_auth_info_data.o
+[60/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/key_agreement/sts_server.o
+[61/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/schedule/build_object.o
+[62/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/add_auth_info_response.o
+[63/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/huks_adapter/huks_adapter.o
+[64/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/auth_ack_response.o
+[65/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/schedule/distribution.o
+[66/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/auth_ack_request.o
+[67/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/auth_start_response.o
+[68/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/exchange_response.o
+[69/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/import_add_auth_data.o
+[70/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/exchange_auth_data.o
+[71/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/auth_start_request.o
+[72/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/exchange_request.o
+[73/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/pake_client_confirm.o
+[74/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/key_agreement_version.o
+[75/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/inform_message.o
+[76/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/rmv_auth_info_data.o
+[77/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/pake_server_confirm.o
+[78/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/pake_request.o
+[79/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/rmv_auth_info_response.o
+[80/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/rmv_auth_info_request.o
+[81/214] STAMP obj/base/startup/frameworks/syspara_lite/token/token_notes.stamp
+[82/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/pake_response.o
+[83/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/parsedata.o
+[84/214] cross compiler obj/base/startup/frameworks/syspara_lite/parameter/src/param_impl_hal/param_impl_hal.o
+[85/214] cross compiler obj/base/security/frameworks/hichainsdk_lite/source/struct/sec_clone_data.o
+[86/214] cross compiler obj/base/startup/frameworks/syspara_lite/token/src/token_impl_hal/token.o
+[87/214] AR libs/libhichainsdk.a
+[88/214] cross compiler obj/base/startup/services/bootstrap_lite/source/system_init.o
+[89/214] cross compiler obj/base/startup/frameworks/syspara_lite/parameter/src/parameter_common.o
+[90/214] cross compiler obj/foundation/communication/services/softbus_lite/trans_service/source/libdistbus/tcp_session.o
+[91/214] STAMP obj/base/security/frameworks/hichainsdk_lite/hichainsdk.stamp
+[92/214] AR libs/libbootstrap.a
+[93/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/coap/source/nstackx_common.o
+[94/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/coap/source/coap_socket.o
+[95/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/coap/source/json_payload.o
+[96/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/coap/source/nstackx_device.o
+[97/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/coap/source/coap_discover.o
+[98/214] cross compiler obj/foundation/communication/services/softbus_lite/authmanager/source/bus_manager.o
+[99/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/communication/broadcast/source/pub_sub_implement.o
+[100/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/communication/broadcast/source/pub_sub_feature.o
+[101/214] cross compiler obj/foundation/communication/services/softbus_lite/trans_service/source/libdistbus/tcp_session_manager.o
+[102/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/discovery_service/source/coap_service.o
+[103/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/discovery_service/source/discovery_service.o
+[104/214] cross compiler obj/foundation/communication/services/softbus_lite/os_adapter/source/L0/os_adapter.o
+[105/214] cross compiler obj/foundation/communication/services/softbus_lite/trans_service/source/libdistbus/trans_lock.o
+[106/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/discovery_service/source/common_info_manager.o
+[107/214] cross compiler obj/foundation/communication/services/softbus_lite/discovery/coap/source/coap_adapter.o
+[108/214] cross compiler obj/foundation/communication/services/softbus_lite/trans_service/source/utils/message.o
+[109/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/adapter/cmsis/queue_adapter.o
+[110/214] cross compiler obj/foundation/communication/services/softbus_lite/trans_service/source/libdistbus/auth_conn_manager.o
+[111/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/registry/service_registry.o
+[112/214] cross compiler obj/foundation/communication/services/softbus_lite/trans_service/source/utils/aes_gcm.o
+[113/214] cross compiler obj/foundation/communication/services/softbus_lite/trans_service/source/utils/tcp_socket.o
+[114/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/adapter/cmsis/thread_adapter.o
+[115/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/communication/broadcast/source/broadcast_service.o
+[116/214] AR libs/libbroadcast.a
+[117/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/adapter/cmsis/memory_adapter.o
+[118/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/adapter/cmsis/time_adapter.o
+[119/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/source/iunknown.o
+[120/214] AR libs/libsamgr_adapter.a
+[121/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/source/samgr_lite.o
+[122/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/source/feature.o
+[123/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/source/common.o
+[124/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/source/service.o
+[125/214] STAMP obj/test/xts/acts/acts_compoment.stamp
+[126/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/source/task_manager.o
+[127/214] STAMP obj/test/xts/tools/tools.stamp
+[128/214] cross compiler obj/foundation/distributedschedule/services/samgr_lite/samgr/source/message.o
+[129/214] STAMP obj/third_party/cJSON/cjson_shared.stamp
+[130/214] AR libs/libsamgr_source.a
+[131/214] cross compiler obj/kernel/liteos_m/components/kal/src/kal.o
+[132/214] AR libs/libauthmanager.a
+[133/214] AR libs/libdiscovery.a
+[134/214] AR libs/libtrans_service.a
+[135/214] AR libs/libsamgr.a
+[136/214] STAMP obj/foundation/communication/services/softbus_lite/discovery_ndk.stamp
+[137/214] STAMP obj/foundation/communication/services/softbus_lite/trans_service_ndk.stamp
+[138/214] STAMP obj/foundation/communication/services/softbus_lite/softbus.stamp
+[139/214] STAMP obj/foundation/distributedschedule/services/samgr_lite/samgr.stamp
+[140/214] STAMP obj/foundation/communication/services/softbus_lite/softbus_lite_ndk.stamp
+[141/214] STAMP obj/foundation/distributedschedule/services/samgr_lite/samgr_lite_ndk.stamp
+[142/214] AR libs/libkal.a
+[143/214] STAMP obj/third_party/pahomqtt/pahomqtt_shared.stamp
+[144/214] cross compiler obj/kernel/liteos_m/components/cmsis/cmsis_liteos.o
+[145/214] AR libs/libcmsis.a
+[146/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/samples/transport.o
+[147/214] cross compiler obj/utils/native/lite/kv_store/src/kvstore_impl_hal/kv_store.o
+[148/214] cross compiler obj/utils/native/lite/kv_store/src/kvstore_common/kvstore_common.o
+[149/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTConnectClient.o
+[150/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTConnectServer.o
+[151/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTDeserializePublish.o
+[152/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTPacket.o
+[153/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTFormat.o
+[154/214] cross compiler obj/third_party/cJSON/cJSON_Utils.o
+[155/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTSerializePublish.o
+[156/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTSubscribeServer.o
+[157/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTSubscribeClient.o
+[158/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTUnsubscribeServer.o
+[159/214] AR libs/libutils_kv_store.a
+[160/214] STAMP obj/utils/native/lite/kv_store/kv_store.stamp
+[161/214] cross compiler obj/third_party/pahomqtt/MQTTPacket/src/MQTTUnsubscribeClient.o
+[162/214] cross compiler obj/third_party/cJSON/cJSON.o
+[163/214] AR libs/libpahomqtt_static.a
+[164/214] AR libs/libcjson_static.a
+[165/214] cross compiler obj/utils/native/lite/file/src/file_impl_hal/file.o
+[166/214] STAMP obj/third_party/pahomqtt/pahomqtt_ndk.stamp
+[167/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_watchdog.o
+[168/214] STAMP obj/third_party/cJSON/cjson_ndk.stamp
+[169/214] STAMP obj/vendor/hisi/hi3861/hi3861/sdk.stamp
+[170/214] STAMP obj/vendor/hisi/hi3861/hi3861/wifiiot_sdk.stamp
+[171/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_at.o
+[172/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_partition.o
+[173/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_uart.o
+[174/214] cross compiler obj/vendor/huawei/wifi-iot/hals/utils/token/hal_token.o
+[175/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/wifi_device.o
+[176/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/wifi_hotspot.o
+[177/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_pwm.o
+[178/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_kal.o
+[179/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_spi.o
+[180/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_i2c.o
+[181/214] ACTION //test/xdevice:xdevice(//build/lite/toolchain:linux_x86_64_riscv32_gcc)
+running install
+running bdist_egg
+running egg_info
+writing src/xdevice.egg-info/PKG-INFO
+writing dependency_links to src/xdevice.egg-info/dependency_links.txt
+writing entry points to src/xdevice.egg-info/entry_points.txt
+writing top-level names to src/xdevice.egg-info/top_level.txt
+reading manifest file 'src/xdevice.egg-info/SOURCES.txt'
+writing manifest file 'src/xdevice.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/xdevice
+copying build/lib/xdevice/__init__.py -> build/bdist.linux-x86_64/egg/xdevice
+copying build/lib/xdevice/__main__.py -> build/bdist.linux-x86_64/egg/xdevice
+copying build/lib/xdevice/variables.py -> build/bdist.linux-x86_64/egg/xdevice
+creating build/bdist.linux-x86_64/egg/xdevice/_core
+creating build/bdist.linux-x86_64/egg/xdevice/_core/testkit
+copying build/lib/xdevice/_core/testkit/kit_lite.py -> build/bdist.linux-x86_64/egg/xdevice/_core/testkit
+copying build/lib/xdevice/_core/testkit/uikit_lite.py -> build/bdist.linux-x86_64/egg/xdevice/_core/testkit
+copying build/lib/xdevice/_core/testkit/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/testkit
+copying build/lib/xdevice/_core/testkit/json_parser.py -> build/bdist.linux-x86_64/egg/xdevice/_core/testkit
+copying build/lib/xdevice/_core/common.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+copying build/lib/xdevice/_core/plugin.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+creating build/bdist.linux-x86_64/egg/xdevice/_core/resource
+creating build/bdist.linux-x86_64/egg/xdevice/_core/resource/template
+copying build/lib/xdevice/_core/resource/template/report.html -> build/bdist.linux-x86_64/egg/xdevice/_core/resource/template
+creating build/bdist.linux-x86_64/egg/xdevice/_core/resource/config
+copying build/lib/xdevice/_core/resource/config/user_config.xml -> build/bdist.linux-x86_64/egg/xdevice/_core/resource/config
+copying build/lib/xdevice/_core/exception.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+creating build/bdist.linux-x86_64/egg/xdevice/_core/report
+copying build/lib/xdevice/_core/report/reporter_helper.py -> build/bdist.linux-x86_64/egg/xdevice/_core/report
+copying build/lib/xdevice/_core/report/result_reporter.py -> build/bdist.linux-x86_64/egg/xdevice/_core/report
+copying build/lib/xdevice/_core/report/suite_reporter.py -> build/bdist.linux-x86_64/egg/xdevice/_core/report
+copying build/lib/xdevice/_core/report/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/report
+copying build/lib/xdevice/_core/report/__main__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/report
+copying build/lib/xdevice/_core/report/encrypt.py -> build/bdist.linux-x86_64/egg/xdevice/_core/report
+creating build/bdist.linux-x86_64/egg/xdevice/_core/environment
+copying build/lib/xdevice/_core/environment/device_lite.py -> build/bdist.linux-x86_64/egg/xdevice/_core/environment
+copying build/lib/xdevice/_core/environment/dmlib_lite.py -> build/bdist.linux-x86_64/egg/xdevice/_core/environment
+copying build/lib/xdevice/_core/environment/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/environment
+copying build/lib/xdevice/_core/environment/manager_lite.py -> build/bdist.linux-x86_64/egg/xdevice/_core/environment
+copying build/lib/xdevice/_core/environment/manager_env.py -> build/bdist.linux-x86_64/egg/xdevice/_core/environment
+creating build/bdist.linux-x86_64/egg/xdevice/_core/executor
+copying build/lib/xdevice/_core/executor/request.py -> build/bdist.linux-x86_64/egg/xdevice/_core/executor
+copying build/lib/xdevice/_core/executor/concurrent.py -> build/bdist.linux-x86_64/egg/xdevice/_core/executor
+copying build/lib/xdevice/_core/executor/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/executor
+copying build/lib/xdevice/_core/executor/source.py -> build/bdist.linux-x86_64/egg/xdevice/_core/executor
+copying build/lib/xdevice/_core/executor/listener.py -> build/bdist.linux-x86_64/egg/xdevice/_core/executor
+copying build/lib/xdevice/_core/executor/scheduler.py -> build/bdist.linux-x86_64/egg/xdevice/_core/executor
+copying build/lib/xdevice/_core/utils.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+copying build/lib/xdevice/_core/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+creating build/bdist.linux-x86_64/egg/xdevice/_core/driver
+copying build/lib/xdevice/_core/driver/drivers_lite.py -> build/bdist.linux-x86_64/egg/xdevice/_core/driver
+copying build/lib/xdevice/_core/driver/parser_lite.py -> build/bdist.linux-x86_64/egg/xdevice/_core/driver
+copying build/lib/xdevice/_core/driver/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/driver
+copying build/lib/xdevice/_core/driver/device_test.py -> build/bdist.linux-x86_64/egg/xdevice/_core/driver
+creating build/bdist.linux-x86_64/egg/xdevice/_core/config
+copying build/lib/xdevice/_core/config/config_manager.py -> build/bdist.linux-x86_64/egg/xdevice/_core/config
+copying build/lib/xdevice/_core/config/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/config
+copying build/lib/xdevice/_core/config/resource_manager.py -> build/bdist.linux-x86_64/egg/xdevice/_core/config
+copying build/lib/xdevice/_core/logger.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+copying build/lib/xdevice/_core/constants.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+copying build/lib/xdevice/_core/interface.py -> build/bdist.linux-x86_64/egg/xdevice/_core
+creating build/bdist.linux-x86_64/egg/xdevice/_core/command
+copying build/lib/xdevice/_core/command/console.py -> build/bdist.linux-x86_64/egg/xdevice/_core/command
+copying build/lib/xdevice/_core/command/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/command
+creating build/bdist.linux-x86_64/egg/xdevice/_core/build
+copying build/lib/xdevice/_core/build/__init__.py -> build/bdist.linux-x86_64/egg/xdevice/_core/build
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/__main__.py to __main__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/variables.py to variables.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/testkit/kit_lite.py to kit_lite.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/testkit/uikit_lite.py to uikit_lite.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/testkit/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/testkit/json_parser.py to json_parser.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/common.py to common.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/plugin.py to plugin.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/exception.py to exception.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/report/reporter_helper.py to reporter_helper.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/report/result_reporter.py to result_reporter.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/report/suite_reporter.py to suite_reporter.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/report/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/report/__main__.py to __main__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/report/encrypt.py to encrypt.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/environment/device_lite.py to device_lite.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/environment/dmlib_lite.py to dmlib_lite.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/environment/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/environment/manager_lite.py to manager_lite.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/environment/manager_env.py to manager_env.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/executor/request.py to request.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/executor/concurrent.py to concurrent.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/executor/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/executor/source.py to source.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/executor/listener.py to listener.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/executor/scheduler.py to scheduler.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/utils.py to utils.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/driver/drivers_lite.py to drivers_lite.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/driver/parser_lite.py to parser_lite.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/driver/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/driver/device_test.py to device_test.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/config/config_manager.py to config_manager.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/config/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/config/resource_manager.py to resource_manager.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/logger.py to logger.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/constants.py to constants.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/interface.py to interface.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/command/console.py to console.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/command/__init__.py to __init__.cpython-38.pyc
+byte-compiling build/bdist.linux-x86_64/egg/xdevice/_core/build/__init__.py to __init__.cpython-38.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/xdevice.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/xdevice.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/xdevice.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/xdevice.egg-info/entry_points.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/xdevice.egg-info/not-zip-safe -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying src/xdevice.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating 'dist/xdevice-0.0.0-py3.8.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing xdevice-0.0.0-py3.8.egg
+removing '/home/ubuntu/.local/lib/python3.8/site-packages/xdevice-0.0.0-py3.8.egg' (and everything under it)
+creating /home/ubuntu/.local/lib/python3.8/site-packages/xdevice-0.0.0-py3.8.egg
+Extracting xdevice-0.0.0-py3.8.egg to /home/ubuntu/.local/lib/python3.8/site-packages
+xdevice 0.0.0 is already the active version in easy-install.pth
+Installing xdevice script to /home/ubuntu/.local/bin
+Installing xdevice_report script to /home/ubuntu/.local/bin
+
+Installed /home/ubuntu/.local/lib/python3.8/site-packages/xdevice-0.0.0-py3.8.egg
+Processing dependencies for xdevice==0.0.0
+Finished processing dependencies for xdevice==0.0.0
+[182/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/wifi_device_util.o
+[183/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_i2s.o
+[184/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_sdio.o
+[185/214] STAMP obj/test/xdevice/xdevice.stamp
+[186/214] AR libs/libwifiservice.a
+[187/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_adc.o
+[188/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_gpio.o
+[189/214] STAMP obj/foundation/communication/frameworks/wifi_lite/wifi.stamp
+[190/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_lowpower.o
+[191/214] STAMP obj/vendor/hisi/hi3861/hi3861_adapter/hals/communication/wifi_lite/wifiservice/wifiservice_ndk.stamp
+[192/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_wifiiot_flash.o
+[193/214] AR libs/libhal_token_static.a
+[194/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/utils/file/src/hal_file.o
+[195/214] cross compiler obj/vendor/hisi/hi3861/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_reset.o
+[196/214] AR libs/libtoken_static.a
+[197/214] AR libs/libhal_file_static.a
+[198/214] ACTION //test/xts/acts:acts(//build/lite/toolchain:linux_x86_64_riscv32_gcc)
+[199/214] AR libs/libhal_iothardware.a
+[200/214] STAMP obj/base/startup/frameworks/syspara_lite/token/token.stamp
+[201/214] AR libs/libnative_file.a
+[202/214] STAMP obj/test/xts/acts/acts.stamp
+[203/214] STAMP obj/base/iot_hardware/frameworks/wifiiot_lite/iothardware.stamp
+[204/214] STAMP obj/utils/native/lite/file/file.stamp
+[205/214] cross compiler obj/vendor/huawei/wifi-iot/hals/utils/sys_param/hal_sys_param.o
+[206/214] AR libs/libhal_sysparam.a
+[207/214] AR libs/libsysparam.a
+[208/214] STAMP obj/base/startup/frameworks/syspara_lite/parameter/parameter_notes.stamp
+[209/214] STAMP obj/base/startup/frameworks/syspara_lite/parameter/parameter.stamp
+[210/214] STAMP obj/build/lite/ohos.stamp
+[211/214] ACTION //build/lite:gen_rootfs(//build/lite/toolchain:linux_x86_64_riscv32_gcc)
+[212/214] STAMP obj/build/lite/gen_rootfs.stamp
+[213/214] ACTION //vendor/hisi/hi3861/hi3861:run_wifiiot_scons(//build/lite/toolchain:linux_x86_64_riscv32_gcc)
+execute ota_builder with python...
+riscv32-unknown-elf-gcc -Iplatform/os/Huawei_LiteOS/kernel/include -Iconfig -DCONFIG_TEE_HUKS_SUPPORT -DCONFIG_CHIP_PKT_32K -DHI_BOARD_ASIC -DHI_ON_FLASH -E build/link/system_config.ld.S -o build/build_tmp/scripts/system_config.ld -P
+nvimg_builder(["build/build_tmp/scripts/system_config.ld"], ["build/link/system_config.ld.S"])
+product_name_list: ['sta']
+xml h file: /home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/h_file/nv
+/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta
+app_subver_list: ['demo']
+current subver_name:demo
+root_dir: /home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool
+mdm_xml: /home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/xml_file/mss_nvi_db.xml
+HNV NAME:mss_nvi_db.xml
+nv_tool: /home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/tools/nv/cdbm
+app_subver_temp_dir:/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/Hi3861_wifiiot_app/outside_demo
+make app_subver_temp_dir
+mdmxml:/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/xml_file/mss_nvi_db.xml
+src_xml_list: ['/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/xml_file/mss_nvi_db.xml']
+combin_xml:/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/Hi3861_wifiiot_app/mss_nvi_db.xml
+root_list [<Element 'HISTUDIO' at 0x7f8505459810>]
+hi_nv_modify_by_cfg
+cfg_file: nv
+
+cmd_line= ('/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/tools/nv/cdbm', '/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/Hi3861_wifiiot_app/outside_demo/nv.xml', '/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/h_file/nv', '/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/Hi3861_wifiiot_app/outside_demo/nv')
+/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/Hi3861_wifiiot_app/outside_demo/nv.xml
+/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/h_file/nv
+/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/Hi3861_wifiiot_app/outside_demo/nv
+===========Init HDB Start===========
+*********strDataTypeDefPath:/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/h_file/nv/../nv/nv_modem_struct_def.txt
+*********strDataTypeDefPath:/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/h_file/nv/../nv/nv_modem_struct_def.txt
+*********strDataTypeDefPath:/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/h_file/nv/../nv/nv_factory_struct_def.txt
+===========Init HDB finish===========
+===========Write NV Buffer To File===========
+===========Write NV Buffer Finish===========
+RETURN VALUE:0
+dst_hnv= /home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/hnv/Hi3861_wifiiot_app.hnv
+Factory NV total num:10
+NV_FILE_STRU :28
+Factory NV total size:824
+Normal NV total num:13
+NV_FILE_STRU :28
+Normal NV total size:766
+build hnv OK:/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/tools/nvtool/out_nv_bin/sta/nv/hnv/Hi3861_wifiiot_app.hnv
+ENDING
+riscv32-unknown-elf-gcc -Iplatform/os/Huawei_LiteOS/kernel/include -Iconfig -DCONFIG_TEE_HUKS_SUPPORT -DCONFIG_CHIP_PKT_32K -DHI_BOARD_ASIC -DHI_ON_FLASH -DFLASH_FIRM_START=4248512 -E build/link/link.ld.S -o build/build_tmp/scripts/link.lds -P
+riscv32-unknown-elf-ld -nostartfiles -nostdlib -static --gc-sections -L/home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/build/scripts/../../../../../huawei/hms/hilink/ohos/l0/hi3861/lib/wifi -L/home/ubuntu/tools/gcc_riscv32/bin/../lib/gcc/riscv32-unknown-elf/7.3.0 -Lbuild/build_tmp/libs/app/wifiiot_app -Lbuild/build_tmp/libs/components/at -Lbuild/build_tmp/libs/platform/drivers -Lbuild/build_tmp/libs/platform/system -Lbuild/build_tmp/scripts -Lbuild/libs -Lbuild/libs/hi3861/release/no_mesh -Lbuild/scripts -Lohos/libs -Tbuild/build_tmp/scripts/link.lds -Map=output/bin/Hi3861_wifiiot_app.map -o output/bin/Hi3861_wifiiot_app.out --start-group --no-whole-archive --whole-archive -lHwKeystoreSDK -ladc -lat -lauthmanager -lbootstrap -lbroadcast -lc_flash -lcfg -lcjson_static -lcmsis -lcommon_lite -lcpup -ldiag -ldiscovery -ldrv -lflash -lgcc -lgpio -lhal_file_static -lhal_iothardware -lhal_sysparam -lhal_token_static -lhichainsdk -lhilog_lite -lhiview_lite -li2c -lio -liothardware -liperf -lkal -llitekernel_flash -lltoswpa -llwip -lm_flash -lmbedtls -lnative_file -lpahomqtt_static -lparttab -lpwm -lres_cfg -lsamgr -lsamgr_adapter -lsamgr_source -lsdio -lsec_flash -lspiffs -lssd1306 -lsysparam -lsystem -ltoken_static -ltrans_service -ltsensor -luart -lupg -lutils_kv_store -lwifi -lwifi_flash -lwifiiot_app -lwifiservice -lwpa --end-group
+riscv32-unknown-elf-objcopy -O binary output/bin/Hi3861_wifiiot_app.out build/build_tmp/cache/Hi3861_wifiiot_app.bin
+baseimg_builder(["build/build_tmp/cache/Hi3861_wifiiot_app_base.bin", "build/build_tmp/cache/Hi3861_wifiiot_app_kernel.bin"], ["build/build_tmp/cache/Hi3861_wifiiot_app.bin"])
+cleanup(["build/build_tmp/cache/Hi3861_wifiiot_app_base.bin", "build/build_tmp/cache/Hi3861_wifiiot_app_kernel.bin"], ["build/build_tmp/cache/Hi3861_wifiiot_app.bin"])
+ota_builder(["build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin"], ["build/build_tmp/cache/Hi3861_wifiiot_app_base.bin", "build/build_tmp/cache/Hi3861_wifiiot_app_kernel.bin"])
+********************package kernel&nv upgrade file********************
+upg kernel file    in: build/build_tmp/cache/Hi3861_wifiiot_app_kernel.bin
+upg normal nv file in: build/build_tmp/nv/Hi3861_wifiiot_app_normal.hnv
+upg file          out: build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin
+[common_head_offset=0][common_head_size=96]
+[common_key_offset=96][common_key_size=288]
+[common_head_sign_offset=384][common_head_sign_size=256]
+[section_head_offset=640][section_head_size=64]
+[upg_file_sign_offset=704][upg_file_sign_size=256]
+[padding_offset=688712][padding_size=8]
+[upg fill user info]chip:b'Hi3861'
+-------------build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin image info print start-------------
+[image_id=0x3c78961e][struct_version=0x0]]
+[section_offset=0x280][section_len=0xa7fd0]
+[file_type=0xf0][file_version=0x0][encrypt_flag=0x42]
+[file_len=0xa8250][key_len=0x120]
+[file_attr=0x44]
+[hash_alg=0x0][sign_alg=0x3f][sign_param=0x0]
+[aes_key[0-1-14-15]=[0x0][0x0][0x0][0x0]]
+[aes_iv [0-1-14-15]=[0x0][0x0][0x0][0x0]]
+[common key][00]=[0x0]
+[common key][01]=[0x0]
+[common key][30]=[0x0]
+[common key][31]=[0x0]
+[common sign][00]=[0xc3]
+[common sign][01]=[0xd2]
+[common sign][30]=[0xa4]
+[common sign][31]=[0xa0]
+[section sign][00]=[0xdc]
+[section sign][01]=[0x0]
+[section sign][30]=[0x64]
+[section sign][31]=[0x70]
+[image_id=0x3c78961e][struct_version=0x0]]
+[hash_alg=0x0][sign_alg=0x3f][sign_param=0x0]
+[section_count=0x2]
+[section0_compress=0x0][section0_offset=0x3c0][section0_len=0xa6e88]
+[section1_compress=0x0][section1_offset=0xa7248][section1_len=0x1000]
+-------------build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin image info print end--------------
+riscv32-unknown-elf-objdump -d output/bin/Hi3861_wifiiot_app.out > output/bin/Hi3861_wifiiot_app.asm
+burn_bin_builder(["output/bin/Hi3861_wifiiot_app_burn.bin", "output/bin/Hi3861_wifiiot_app_allinone.bin"], ["build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin", "output/bin/Hi3861_loader_signed.bin"])
+********************package hiburn file********************
+hbin flash boot file in : output/bin/Hi3861_boot_signed.bin
+hbin factory nv file in : build/build_tmp/nv/Hi3861_wifiiot_app_factory.hnv
+hbin normal nv file  in : build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin
+hbin upg file        in : build/build_tmp/nv/Hi3861_wifiiot_app_factory.hnv
+hbin file           out : output/bin/Hi3861_wifiiot_app_burn.bin
+-------------output/bin/Hi3861_wifiiot_app_burn.bin image info print start-------------
+[bin_size]=[0xb5250]
+[image_id=0x3c78961e][struct_version=0x0]]
+[section_offset=0x280][section_len=0xa7fd0]
+[file_type=0xf0][file_version=0x0][encrypt_flag=0x42]
+[file_len=0xa8250][key_len=0x120]
+[hash_alg=0x0][sign_alg=0x3f][sign_param=0x0]
+[aes_key[0,1,14,15]=[0x0][0x0][0x0][0x0]]
+[aes_iv[0,1,14,15]=[0x0][0x0][0x0][0x0]]
+-------------output/bin/Hi3861_wifiiot_app_burn.bin image info print end--------------
+['output/bin/Hi3861_loader_signed.bin', 'output/bin/Hi3861_wifiiot_app_burn.bin', 'output/bin/Hi3861_boot_signed_B.bin']
+[0, 0, 2072576]
+[0, 2097152, 24576]
+[15360, 741968, 24576]
+[0, 1, 1]
+4022250975
+boot_ota_builder(["output/bin/Hi3861_wifiiot_app_flash_boot_ota.bin"], ["output/bin/Hi3861_boot_signed.bin"])
+********************package boot upgrade file********************
+boot upg file  in: output/bin/Hi3861_boot_signed.bin
+boot upg file out: output/bin/Hi3861_wifiiot_app_flash_boot_ota.bin
+[common_head_offset=0][common_head_size=96]
+[common_key_offset=96][common_key_size=288]
+[common_head_sign_offset=384][common_head_sign_size=256]
+[section_head_offset=640][section_head_size=64]
+[upg_file_sign_offset=704][upg_file_sign_size=256]
+[padding_offset=0][padding_size=0]
+[upg fill user info]chip:b'Hi3861'
+-------------output/bin/Hi3861_wifiiot_app_flash_boot_ota.bin image info print start-------------
+[image_id=0x3c78961e][struct_version=0x0]]
+[section_offset=0x280][section_len=0x60a0]
+[file_type=0xe1][file_version=0x0][encrypt_flag=0x42]
+[file_len=0x6320][key_len=0x120]
+[file_attr=0x44]
+[hash_alg=0x0][sign_alg=0x3f][sign_param=0x0]
+[aes_key[0-1-14-15]=[0x0][0x0][0x0][0x0]]
+[aes_iv [0-1-14-15]=[0x0][0x0][0x0][0x0]]
+[common key][00]=[0x0]
+[common key][01]=[0x0]
+[common key][30]=[0x0]
+[common key][31]=[0x0]
+[common sign][00]=[0xc9]
+[common sign][01]=[0x21]
+[common sign][30]=[0x2f]
+[common sign][31]=[0x82]
+[section sign][00]=[0x3]
+[section sign][01]=[0x99]
+[section sign][30]=[0xe6]
+[section sign][31]=[0xec]
+[image_id=0x3c78961e][struct_version=0x0]]
+[hash_alg=0x0][sign_alg=0x3f][sign_param=0x0]
+[section_count=0x1]
+[section0_compress=0x0][section0_offset=0x3c0][section0_len=0x5f60]
+[section1_compress=0x0][section1_offset=0x0][section1_len=0x0]
+-------------output/bin/Hi3861_wifiiot_app_flash_boot_ota.bin image info print end--------------
+compress_ota_builder(["output/bin/Hi3861_wifiiot_app_ota.bin"], ["build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin"])
+********************package compress upgrade file********************
+compress upg file in:  build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin
+compress upg file out: output/bin/Hi3861_wifiiot_app_ota.bin
+lzma compress tool : /home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/build/scripts/../../tools/lzma_tool/lzma_tool
+lzma    src   file : build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.bin
+lzma    out   file : build/build_tmp/cache/Hi3861_wifiiot_app_ota_temp.lzma
+
+LZMA 19.00 (x64) : Igor Pavlov : Public domain : 2019-02-21
+
+Input size:  688720 (0 MiB)
+                                                                Output size: 433711 (0 MiB)
+[upgbin-compressbin]0xa8250-0x12d000
+[common_head_offset=0][common_head_size=96]
+[common_key_offset=96][common_key_size=288]
+[common_head_sign_offset=384][common_head_sign_size=256]
+[section_head_offset=640][section_head_size=64]
+[upg_file_sign_offset=704][upg_file_sign_size=256]
+[padding_offset=434671][padding_size=1]
+[upg fill user info]chip:b'Hi3861'
+-------------output/bin/Hi3861_wifiiot_app_ota.bin image info print start-------------
+[image_id=0x3c78961e][struct_version=0x0]]
+[section_offset=0x280][section_len=0x69f70]
+[file_type=0xf0][file_version=0x0][encrypt_flag=0x42]
+[file_len=0x6a1f0][key_len=0x120]
+[file_attr=0x44]
+[hash_alg=0x0][sign_alg=0x3f][sign_param=0x0]
+[aes_key[0-1-14-15]=[0x0][0x0][0x0][0x0]]
+[aes_iv [0-1-14-15]=[0x0][0x0][0x0][0x0]]
+[common key][00]=[0x0]
+[common key][01]=[0x0]
+[common key][30]=[0x0]
+[common key][31]=[0x0]
+[common sign][00]=[0x73]
+[common sign][01]=[0xe6]
+[common sign][30]=[0x73]
+[common sign][31]=[0x11]
+[section sign][00]=[0xd3]
+[section sign][01]=[0x70]
+[section sign][30]=[0xa1]
+[section sign][31]=[0xc1]
+[image_id=0x3c78961e][struct_version=0x0]]
+[hash_alg=0x0][sign_alg=0x3f][sign_param=0x0]
+[section_count=0x1]
+[section0_compress=0x1][section0_offset=0x3c0][section0_len=0x69e2f]
+[section1_compress=0x0][section1_offset=0x0][section1_len=0x0]
+-------------output/bin/Hi3861_wifiiot_app_ota.bin image info print end--------------
+
+< ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ >
+                              BUILD SUCCESS                              
+< ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ >
+
+See build log from: /home/ubuntu/sharefolder/code-1.0/vendor/hisi/hi3861/hi3861/build/build_tmp/logs/build_kernel.log
+[214/214] STAMP obj/vendor/hisi/hi3861/hi3861/run_wifiiot_scons.stamp

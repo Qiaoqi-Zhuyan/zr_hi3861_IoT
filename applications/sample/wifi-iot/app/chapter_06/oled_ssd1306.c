@@ -190,3 +190,54 @@ void OledShowString(uint8_t x, uint8_t y, const char* str, Font font)
 		j++;
 	}
 }
+
+void OledShowChar(uint8_t x, uint8_t y, uint8_t ch, Font font)
+{      	
+	uint8_t c = 0;
+    uint8_t i = 0;
+
+    c = ch - ' '; //得到偏移后的值	
+    if (x > OLED_WIDTH - 1) 
+    {
+        x = 0;
+        y = y + 2;
+    }
+
+    if (font == FONT8x16) 
+    {
+        OledSetPosition(x, y);	
+        for (i = 0; i < 8; i++)
+        {
+            WriteData(F8X16[c*16 + i]);
+        }
+
+        OledSetPosition(x, y+1);
+        for (i = 0; i < 8; i++) 
+        {
+            WriteData(F8X16[c*16 + i + 8]);
+        }
+    } 
+    else 
+    {
+        OledSetPosition(x, y);
+        for (i = 0; i < 6; i++) 
+        {
+            WriteData(F6x8[c][i]);
+        }
+    }
+}
+
+void ssd1306_DrawBitmap(const uint8_t* bitmap, uint32_t size)
+{
+    uint8_t rows = size * 8 / SSD1306_WIDTH;
+    if (rows > SSD1306_HEIGHT) {
+        rows = SSD1306_HEIGHT;
+    }
+    for (uint8_t y = 0; y < rows; y++) {
+        for (uint8_t x = 0; x < SSD1306_WIDTH; x++) {
+            uint8_t byte = bitmap[(y * SSD1306_WIDTH / 8) + (x / 8)];
+            uint8_t bit = byte & (0x80 >> (x % 8));
+            ssd1306_DrawPixel(x, y, bit ? White : Black);
+        }
+    }
+}
