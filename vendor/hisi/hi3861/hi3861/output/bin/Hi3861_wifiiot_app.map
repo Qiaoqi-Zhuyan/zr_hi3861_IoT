@@ -1211,6 +1211,12 @@ build/build_tmp/libs/platform/system/libparttab.a(flash_partition_table.o)
                               (--whole-archive)
 build/build_tmp/libs/platform/drivers/libpwm.a(hi_pwm.o)
                               (--whole-archive)
+ohos/libs/libqr_code.a(ssd1306.o)
+                              (--whole-archive)
+ohos/libs/libqr_code.a(ssd1306_fonts.o)
+                              (--whole-archive)
+ohos/libs/libqr_code.a(oled_demo.o)
+                              (--whole-archive)
 build/libs/libres_cfg.a(los_init_redirect.o)
                               (--whole-archive)
 build/libs/libres_cfg.a(los_tick_redirect.o)
@@ -1298,12 +1304,6 @@ build/libs/libspiffs.a(spiffs_gc.o)
 build/libs/libspiffs.a(spiffs_hydrogen.o)
                               (--whole-archive)
 build/libs/libspiffs.a(spiffs_nucleus.o)
-                              (--whole-archive)
-ohos/libs/libssd1306.a(ssd1306.o)
-                              (--whole-archive)
-ohos/libs/libssd1306.a(ssd1306_fonts.o)
-                              (--whole-archive)
-ohos/libs/libssd1306.a(oled_demo.o)
                               (--whole-archive)
 ohos/libs/libsysparam.a(parameter_common.o)
                               (--whole-archive)
@@ -10275,6 +10275,68 @@ Discarded input sections
                 0x0000000000000000       0x8e build/build_tmp/libs/platform/drivers/libpwm.a(hi_pwm.o)
  .text.hi_pwm_stop
                 0x0000000000000000       0x68 build/build_tmp/libs/platform/drivers/libpwm.a(hi_pwm.o)
+ .text          0x0000000000000000        0x0 ohos/libs/libqr_code.a(ssd1306.o)
+ .data          0x0000000000000000        0x0 ohos/libs/libqr_code.a(ssd1306.o)
+ .bss           0x0000000000000000        0x0 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DegToRad
+                0x0000000000000000       0x68 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_NormalizeTo0_360
+                0x0000000000000000       0x30 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_Reset
+                0x0000000000000000       0x30 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.HAL_GetTick
+                0x0000000000000000       0x72 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_WriteData
+                0x0000000000000000       0x8e ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_FillBuffer
+                0x0000000000000000       0x54 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawChar
+                0x0000000000000000       0xec ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawString
+                0x0000000000000000       0x5e ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_SetCursor
+                0x0000000000000000       0x40 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawLine
+                0x0000000000000000       0xb6 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawPolyline
+                0x0000000000000000       0x66 ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawArc
+                0x0000000000000000      0x1bc ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawCircle
+                0x0000000000000000       0xee ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawRectangle
+                0x0000000000000000       0x7e ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_DrawRegion
+                0x0000000000000000       0xfa ohos/libs/libqr_code.a(ssd1306.o)
+ .text.ssd1306_GetDisplayOn
+                0x0000000000000000       0x38 ohos/libs/libqr_code.a(ssd1306.o)
+ .rodata.ssd1306_DegToRad.cst8
+                0x0000000000000000       0x10 ohos/libs/libqr_code.a(ssd1306.o)
+ .rodata.ssd1306_DrawRegion.str1.4
+                0x0000000000000000       0x29 ohos/libs/libqr_code.a(ssd1306.o)
+ .text          0x0000000000000000        0x0 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .data          0x0000000000000000        0x0 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .bss           0x0000000000000000        0x0 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .data.rel.local.Font_11x18
+                0x0000000000000000        0x8 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .data.rel.local.Font_16x26
+                0x0000000000000000        0x8 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .data.rel.local.Font_6x8
+                0x0000000000000000        0x8 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .data.rel.local.Font_7x10
+                0x0000000000000000        0x8 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .rodata.Font11x18
+                0x0000000000000000      0xd5c ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .rodata.Font16x26
+                0x0000000000000000     0x134c ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .rodata.Font6x8
+                0x0000000000000000      0x5f0 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .rodata.Font7x10
+                0x0000000000000000      0x76c ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .comment       0x0000000000000000       0x12 ohos/libs/libqr_code.a(ssd1306_fonts.o)
+ .text          0x0000000000000000        0x0 ohos/libs/libqr_code.a(oled_demo.o)
+ .data          0x0000000000000000        0x0 ohos/libs/libqr_code.a(oled_demo.o)
+ .bss           0x0000000000000000        0x0 ohos/libs/libqr_code.a(oled_demo.o)
  .text          0x0000000000000000        0x0 build/libs/libres_cfg.a(los_init_redirect.o)
  .data          0x0000000000000000        0x0 build/libs/libres_cfg.a(los_init_redirect.o)
  .bss           0x0000000000000000        0x0 build/libs/libres_cfg.a(los_init_redirect.o)
@@ -10956,68 +11018,6 @@ Discarded input sections
                 0x0000000000000000       0x64 build/libs/libspiffs.a(spiffs_nucleus.o)
  .text.spiffs_fd_temporal_cache_rehash
                 0x0000000000000000       0x54 build/libs/libspiffs.a(spiffs_nucleus.o)
- .text          0x0000000000000000        0x0 ohos/libs/libssd1306.a(ssd1306.o)
- .data          0x0000000000000000        0x0 ohos/libs/libssd1306.a(ssd1306.o)
- .bss           0x0000000000000000        0x0 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DegToRad
-                0x0000000000000000       0x68 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_NormalizeTo0_360
-                0x0000000000000000       0x30 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_Reset
-                0x0000000000000000       0x30 ohos/libs/libssd1306.a(ssd1306.o)
- .text.HAL_GetTick
-                0x0000000000000000       0x72 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_WriteData
-                0x0000000000000000       0x8e ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_FillBuffer
-                0x0000000000000000       0x54 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawChar
-                0x0000000000000000       0xec ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawString
-                0x0000000000000000       0x5e ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_SetCursor
-                0x0000000000000000       0x40 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawLine
-                0x0000000000000000       0xb6 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawPolyline
-                0x0000000000000000       0x66 ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawArc
-                0x0000000000000000      0x1bc ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawCircle
-                0x0000000000000000       0xee ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawRectangle
-                0x0000000000000000       0x7e ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_DrawRegion
-                0x0000000000000000       0xfa ohos/libs/libssd1306.a(ssd1306.o)
- .text.ssd1306_GetDisplayOn
-                0x0000000000000000       0x38 ohos/libs/libssd1306.a(ssd1306.o)
- .rodata.ssd1306_DegToRad.cst8
-                0x0000000000000000       0x10 ohos/libs/libssd1306.a(ssd1306.o)
- .rodata.ssd1306_DrawRegion.str1.4
-                0x0000000000000000       0x29 ohos/libs/libssd1306.a(ssd1306.o)
- .text          0x0000000000000000        0x0 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .data          0x0000000000000000        0x0 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .bss           0x0000000000000000        0x0 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .data.rel.local.Font_11x18
-                0x0000000000000000        0x8 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .data.rel.local.Font_16x26
-                0x0000000000000000        0x8 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .data.rel.local.Font_6x8
-                0x0000000000000000        0x8 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .data.rel.local.Font_7x10
-                0x0000000000000000        0x8 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .rodata.Font11x18
-                0x0000000000000000      0xd5c ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .rodata.Font16x26
-                0x0000000000000000     0x134c ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .rodata.Font6x8
-                0x0000000000000000      0x5f0 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .rodata.Font7x10
-                0x0000000000000000      0x76c ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .comment       0x0000000000000000       0x12 ohos/libs/libssd1306.a(ssd1306_fonts.o)
- .text          0x0000000000000000        0x0 ohos/libs/libssd1306.a(oled_demo.o)
- .data          0x0000000000000000        0x0 ohos/libs/libssd1306.a(oled_demo.o)
- .bss           0x0000000000000000        0x0 ohos/libs/libssd1306.a(oled_demo.o)
  .text          0x0000000000000000        0x0 ohos/libs/libsysparam.a(parameter_common.o)
  .data          0x0000000000000000        0x0 ohos/libs/libsysparam.a(parameter_common.o)
  .bss           0x0000000000000000        0x0 ohos/libs/libsysparam.a(parameter_common.o)
@@ -34267,282 +34267,282 @@ Linker script and memory map
  .text.UtilsFileSeek
                 0x00000000004a3584       0x28 ohos/libs/libnative_file.a(file.o)
                 0x00000000004a3584                UtilsFileSeek
- .text.GetImplement
-                0x00000000004a35ac       0x2c ohos/libs/libsamgr.a(samgr_lite.o)
- .text.GetServiceName
-                0x00000000004a35d8       0x32 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.Init     0x00000000004a360a      0x128 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.GetService
-                0x00000000004a3732       0x64 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.GetFeatureApi
-                0x00000000004a3796       0x4e ohos/libs/libsamgr.a(samgr_lite.o)
- .text.GetDefaultFeatureApi
-                0x00000000004a37e4       0x2a ohos/libs/libsamgr.a(samgr_lite.o)
- .text.UnregisterFeatureApi
-                0x00000000004a380e       0x46 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.UnregisterDefaultFeatureApi
-                0x00000000004a3854       0x2a ohos/libs/libsamgr.a(samgr_lite.o)
- .text.RegisterFeatureApi
-                0x00000000004a387e       0x5c ohos/libs/libsamgr.a(samgr_lite.o)
- .text.RegisterDefaultFeatureApi
-                0x00000000004a38da       0x2c ohos/libs/libsamgr.a(samgr_lite.o)
- .text.UnregisterFeature
-                0x00000000004a3906       0x38 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.RegisterFeature
-                0x00000000004a393e       0x6a ohos/libs/libsamgr.a(samgr_lite.o)
- .text.UnregisterService
-                0x00000000004a39a8       0x9a ohos/libs/libsamgr.a(samgr_lite.o)
- .text.RegisterService
-                0x00000000004a3a42       0xaa ohos/libs/libsamgr.a(samgr_lite.o)
- .text.GetUninitializedPos
-                0x00000000004a3aec       0x70 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.GetSpecifiedTaskPool
-                0x00000000004a3b5c       0x94 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.AddTaskPool
-                0x00000000004a3bf0      0x138 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.InitializeSingleService
-                0x00000000004a3d28       0x5e ohos/libs/libsamgr.a(samgr_lite.o)
- .text.InitializeAllServices
-                0x00000000004a3d86       0xca ohos/libs/libsamgr.a(samgr_lite.o)
- .text.SendBootRequest
-                0x00000000004a3e50       0x5a ohos/libs/libsamgr.a(samgr_lite.o)
- .text.InitCompleted
-                0x00000000004a3eaa       0xc4 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.SAMGR_Bootstrap
-                0x00000000004a3f6e      0x11a ohos/libs/libsamgr.a(samgr_lite.o)
-                0x00000000004a3f6e                SAMGR_Bootstrap
- .text.HandleInitRequest
-                0x00000000004a4088       0xb0 ohos/libs/libsamgr.a(samgr_lite.o)
- .text.SAMGR_GetInstance
-                0x00000000004a4138       0x3a ohos/libs/libsamgr.a(samgr_lite.o)
-                0x00000000004a4138                SAMGR_GetInstance
- .text.SAMGR_GetServiceByID
-                0x00000000004a4172       0x56 ohos/libs/libsamgr.a(samgr_lite.o)
-                0x00000000004a4172                SAMGR_GetServiceByID
- .text.SAMGR_RegisterServiceApi
-                0x00000000004a41c8       0x26 ohos/libs/libsamgr.a(service_registry.o)
-                0x00000000004a41c8                SAMGR_RegisterServiceApi
- .text.SAMGR_FindServiceApi
-                0x00000000004a41ee       0x26 ohos/libs/libsamgr.a(service_registry.o)
-                0x00000000004a41ee                SAMGR_FindServiceApi
- .text.SAMGR_Malloc
-                0x00000000004a4214       0x3a ohos/libs/libsamgr_adapter.a(memory_adapter.o)
-                0x00000000004a4214                SAMGR_Malloc
- .text.SAMGR_Free
-                0x00000000004a424e       0x38 ohos/libs/libsamgr_adapter.a(memory_adapter.o)
-                0x00000000004a424e                SAMGR_Free
- .text.QUEUE_Create
-                0x00000000004a4286       0x3a ohos/libs/libsamgr_adapter.a(queue_adapter.o)
-                0x00000000004a4286                QUEUE_Create
- .text.QUEUE_Put
-                0x00000000004a42c0       0x38 ohos/libs/libsamgr_adapter.a(queue_adapter.o)
-                0x00000000004a42c0                QUEUE_Put
- .text.QUEUE_Pop
-                0x00000000004a42f8       0x3c ohos/libs/libsamgr_adapter.a(queue_adapter.o)
-                0x00000000004a42f8                QUEUE_Pop
- .text.QUEUE_Destroy
-                0x00000000004a4334       0x30 ohos/libs/libsamgr_adapter.a(queue_adapter.o)
-                0x00000000004a4334                QUEUE_Destroy
- .text.MUTEX_InitValue
-                0x00000000004a4364       0x2a ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a4364                MUTEX_InitValue
- .text.MUTEX_Lock
-                0x00000000004a438e       0x2e ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a438e                MUTEX_Lock
- .text.MUTEX_Unlock
-                0x00000000004a43bc       0x2c ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a43bc                MUTEX_Unlock
- .text.MUTEX_GlobalLock
-                0x00000000004a43e8       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a43e8                MUTEX_GlobalLock
- .text.MUTEX_GlobalUnlock
-                0x00000000004a4410       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a4410                MUTEX_GlobalUnlock
- .text.THREAD_Create
-                0x00000000004a4438       0x44 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a4438                THREAD_Create
- .text.THREAD_Total
-                0x00000000004a447c       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a447c                THREAD_Total
- .text.THREAD_GetThreadLocal
-                0x00000000004a44a4       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a44a4                THREAD_GetThreadLocal
- .text.THREAD_SetThreadLocal
-                0x00000000004a44cc       0x24 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
-                0x00000000004a44cc                THREAD_SetThreadLocal
- .text.WDT_Reset
-                0x00000000004a44f0       0x26 ohos/libs/libsamgr_adapter.a(time_adapter.o)
-                0x00000000004a44f0                WDT_Reset
- .text.WDT_Start
-                0x00000000004a4516       0x28 ohos/libs/libsamgr_adapter.a(time_adapter.o)
-                0x00000000004a4516                WDT_Start
- .text.WDT_Stop
-                0x00000000004a453e       0x26 ohos/libs/libsamgr_adapter.a(time_adapter.o)
-                0x00000000004a453e                WDT_Stop
- .text.SAMGR_GetProcessTime
-                0x00000000004a4564       0x2e ohos/libs/libsamgr_adapter.a(time_adapter.o)
-                0x00000000004a4564                SAMGR_GetProcessTime
- .text.VECTOR_Make
-                0x00000000004a4592       0x34 ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a4592                VECTOR_Make
- .text.VECTOR_Clear
-                0x00000000004a45c6       0x3e ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a45c6                VECTOR_Clear
- .text.VECTOR_Add
-                0x00000000004a4604       0xca ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a4604                VECTOR_Add
- .text.VECTOR_At
-                0x00000000004a46ce       0x3e ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a46ce                VECTOR_At
- .text.VECTOR_Swap
-                0x00000000004a470c       0x4c ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a470c                VECTOR_Swap
- .text.VECTOR_FindByKey
-                0x00000000004a4758       0x6a ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a4758                VECTOR_FindByKey
- .text.VECTOR_Size
-                0x00000000004a47c2       0x2e ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a47c2                VECTOR_Size
- .text.VECTOR_Num
-                0x00000000004a47f0       0x3a ohos/libs/libsamgr_source.a(common.o)
-                0x00000000004a47f0                VECTOR_Num
- .text.SAMGR_AddInterface
-                0x00000000004a482a       0x34 ohos/libs/libsamgr_source.a(feature.o)
-                0x00000000004a482a                SAMGR_AddInterface
- .text.SAMGR_DelInterface
-                0x00000000004a485e       0x30 ohos/libs/libsamgr_source.a(feature.o)
-                0x00000000004a485e                SAMGR_DelInterface
- .text.SAMGR_GetInterface
-                0x00000000004a488e       0x2c ohos/libs/libsamgr_source.a(feature.o)
-                0x00000000004a488e                SAMGR_GetInterface
- .text.SAMGR_IsNoInterface
-                0x00000000004a48ba       0x30 ohos/libs/libsamgr_source.a(feature.o)
-                0x00000000004a48ba                SAMGR_IsNoInterface
- .text.FEATURE_CreateInstance
-                0x00000000004a48ea       0x3a ohos/libs/libsamgr_source.a(feature.o)
-                0x00000000004a48ea                FEATURE_CreateInstance
- .text.IUNKNOWN_AddRef
-                0x00000000004a4924       0x3c ohos/libs/libsamgr_source.a(iunknown.o)
-                0x00000000004a4924                IUNKNOWN_AddRef
- .text.IUNKNOWN_QueryInterface
-                0x00000000004a4960       0x4c ohos/libs/libsamgr_source.a(iunknown.o)
-                0x00000000004a4960                IUNKNOWN_QueryInterface
- .text.IUNKNOWN_Release
-                0x00000000004a49ac       0x3c ohos/libs/libsamgr_source.a(iunknown.o)
-                0x00000000004a49ac                IUNKNOWN_Release
- .text.SharedSend
-                0x00000000004a49e8       0x84 ohos/libs/libsamgr_source.a(message.o)
- .text.FreeReference
-                0x00000000004a4a6c       0x5a ohos/libs/libsamgr_source.a(message.o)
- .text.SAMGR_SendRequest
-                0x00000000004a4ac6       0x66 ohos/libs/libsamgr_source.a(message.o)
-                0x00000000004a4ac6                SAMGR_SendRequest
- .text.SAMGR_SendResponse
-                0x00000000004a4b2c       0x80 ohos/libs/libsamgr_source.a(message.o)
-                0x00000000004a4b2c                SAMGR_SendResponse
- .text.SAMGR_MsgRecv
-                0x00000000004a4bac       0x52 ohos/libs/libsamgr_source.a(message.o)
-                0x00000000004a4bac                SAMGR_MsgRecv
- .text.SAMGR_FreeMsg
-                0x00000000004a4bfe       0x52 ohos/libs/libsamgr_source.a(message.o)
-                0x00000000004a4bfe                SAMGR_FreeMsg
- .text.SAMGR_SendSharedRequest
-                0x00000000004a4c50       0x8e ohos/libs/libsamgr_source.a(message.o)
-                0x00000000004a4c50                SAMGR_SendSharedRequest
- .text.SAMGR_SendSharedDirectRequest
-                0x00000000004a4cde       0xbc ohos/libs/libsamgr_source.a(message.o)
-                0x00000000004a4cde                SAMGR_SendSharedDirectRequest
- .text.SAMGR_SendResponseByIdentity
-                0x00000000004a4d9a       0x46 ohos/libs/libsamgr_source.a(message.o)
-                0x00000000004a4d9a                SAMGR_SendResponseByIdentity
- .text.GetFeatureName
-                0x00000000004a4de0       0x32 ohos/libs/libsamgr_source.a(service.o)
- .text.SAMGR_CreateServiceImpl
-                0x00000000004a4e12       0x7c ohos/libs/libsamgr_source.a(service.o)
-                0x00000000004a4e12                SAMGR_CreateServiceImpl
- .text.DEFAULT_AddFeature
-                0x00000000004a4e8e       0x66 ohos/libs/libsamgr_source.a(service.o)
-                0x00000000004a4e8e                DEFAULT_AddFeature
- .text.DEFAULT_Initialize
-                0x00000000004a4ef4       0xb0 ohos/libs/libsamgr_source.a(service.o)
-                0x00000000004a4ef4                DEFAULT_Initialize
- .text.DEFAULT_MessageHandle
-                0x00000000004a4fa4       0x6c ohos/libs/libsamgr_source.a(service.o)
-                0x00000000004a4fa4                DEFAULT_MessageHandle
- .text.DEFAULT_GetFeature
-                0x00000000004a5010       0x3e ohos/libs/libsamgr_source.a(service.o)
-                0x00000000004a5010                DEFAULT_GetFeature
- .text.DEFAULT_GetFeatureId
-                0x00000000004a504e       0x64 ohos/libs/libsamgr_source.a(service.o)
-                0x00000000004a504e                DEFAULT_GetFeatureId
- .text.DEFAULT_DeleteFeature
-                0x00000000004a50b2       0x78 ohos/libs/libsamgr_source.a(service.o)
-                0x00000000004a50b2                DEFAULT_DeleteFeature
- .text.ProcResponse
-                0x00000000004a512a       0x3c ohos/libs/libsamgr_source.a(task_manager.o)
- .text.ProcDirectRequest
-                0x00000000004a5166       0x3c ohos/libs/libsamgr_source.a(task_manager.o)
- .text.CorrectServiceImpl
-                0x00000000004a51a2       0x46 ohos/libs/libsamgr_source.a(task_manager.o)
- .text.BeginWork
-                0x00000000004a51e8       0x5e ohos/libs/libsamgr_source.a(task_manager.o)
- .text.ProcRequest
-                0x00000000004a5246       0x5a ohos/libs/libsamgr_source.a(task_manager.o)
- .text.EndWork  0x00000000004a52a0       0xa2 ohos/libs/libsamgr_source.a(task_manager.o)
- .text.TaskEntry
-                0x00000000004a5342       0x8a ohos/libs/libsamgr_source.a(task_manager.o)
- .text.SAMGR_CreateFixedTaskPool
-                0x00000000004a53cc       0xe2 ohos/libs/libsamgr_source.a(task_manager.o)
-                0x00000000004a53cc                SAMGR_CreateFixedTaskPool
- .text.SAMGR_StartTaskPool
-                0x00000000004a54ae       0xb0 ohos/libs/libsamgr_source.a(task_manager.o)
-                0x00000000004a54ae                SAMGR_StartTaskPool
- .text.SAMGR_ReleaseTaskPool
-                0x00000000004a555e       0x66 ohos/libs/libsamgr_source.a(task_manager.o)
-                0x00000000004a555e                SAMGR_ReleaseTaskPool
- .text.SAMGR_ReferenceTaskPool
-                0x00000000004a55c4       0x3a ohos/libs/libsamgr_source.a(task_manager.o)
-                0x00000000004a55c4                SAMGR_ReferenceTaskPool
- .text.SAMGR_GetCurrentQueueID
-                0x00000000004a55fe       0x28 ohos/libs/libsamgr_source.a(task_manager.o)
-                0x00000000004a55fe                SAMGR_GetCurrentQueueID
  .text.Oled_MainLoop
-                0x00000000004a5626       0x5c ohos/libs/libssd1306.a(oled_demo.o)
- .text.init     0x00000000004a5682       0x48 ohos/libs/libssd1306.a(oled_demo.o)
-                0x00000000004a5682                init
+                0x00000000004a35ac       0x5c ohos/libs/libqr_code.a(oled_demo.o)
+ .text.init     0x00000000004a3608       0x48 ohos/libs/libqr_code.a(oled_demo.o)
+                0x00000000004a3608                init
  .text.Oled_Task
-                0x00000000004a56ca       0x3c ohos/libs/libssd1306.a(oled_demo.o)
+                0x00000000004a3650       0x3c ohos/libs/libqr_code.a(oled_demo.o)
  .text.ssd1306_SendData
-                0x00000000004a5706       0x3c ohos/libs/libssd1306.a(ssd1306.o)
+                0x00000000004a368c       0x3c ohos/libs/libqr_code.a(ssd1306.o)
  .text.ssd1306_WiteByte.constprop.0
-                0x00000000004a5742       0x34 ohos/libs/libssd1306.a(ssd1306.o)
+                0x00000000004a36c8       0x34 ohos/libs/libqr_code.a(ssd1306.o)
  .text.HAL_Delay
-                0x00000000004a5776       0x54 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a5776                HAL_Delay
+                0x00000000004a36fc       0x54 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a36fc                HAL_Delay
  .text.ssd1306_WriteCommand
-                0x00000000004a57ca       0x28 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a57ca                ssd1306_WriteCommand
+                0x00000000004a3750       0x28 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a3750                ssd1306_WriteCommand
  .text.ssd1306_Fill
-                0x00000000004a57f2       0x48 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a57f2                ssd1306_Fill
+                0x00000000004a3778       0x48 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a3778                ssd1306_Fill
  .text.ssd1306_UpdateScreen
-                0x00000000004a583a       0xa6 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a583a                ssd1306_UpdateScreen
+                0x00000000004a37c0       0xa6 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a37c0                ssd1306_UpdateScreen
  .text.ssd1306_DrawPixel
-                0x00000000004a58e0       0x78 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a58e0                ssd1306_DrawPixel
+                0x00000000004a3866       0x78 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a3866                ssd1306_DrawPixel
  .text.ssd1306_DrawBitmap
-                0x00000000004a5958       0x86 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a5958                ssd1306_DrawBitmap
+                0x00000000004a38de       0x86 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a38de                ssd1306_DrawBitmap
  .text.ssd1306_SetContrast
-                0x00000000004a59de       0x34 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a59de                ssd1306_SetContrast
+                0x00000000004a3964       0x34 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a3964                ssd1306_SetContrast
  .text.ssd1306_SetDisplayOn
-                0x00000000004a5a12       0x48 ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a5a12                ssd1306_SetDisplayOn
+                0x00000000004a3998       0x48 ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a3998                ssd1306_SetDisplayOn
  .text.ssd1306_Init
-                0x00000000004a5a5a      0x10e ohos/libs/libssd1306.a(ssd1306.o)
-                0x00000000004a5a5a                ssd1306_Init
+                0x00000000004a39e0      0x10e ohos/libs/libqr_code.a(ssd1306.o)
+                0x00000000004a39e0                ssd1306_Init
+ .text.GetImplement
+                0x00000000004a3aee       0x2c ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.GetServiceName
+                0x00000000004a3b1a       0x32 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.Init     0x00000000004a3b4c      0x128 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.GetService
+                0x00000000004a3c74       0x64 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.GetFeatureApi
+                0x00000000004a3cd8       0x4e ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.GetDefaultFeatureApi
+                0x00000000004a3d26       0x2a ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.UnregisterFeatureApi
+                0x00000000004a3d50       0x46 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.UnregisterDefaultFeatureApi
+                0x00000000004a3d96       0x2a ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.RegisterFeatureApi
+                0x00000000004a3dc0       0x5c ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.RegisterDefaultFeatureApi
+                0x00000000004a3e1c       0x2c ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.UnregisterFeature
+                0x00000000004a3e48       0x38 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.RegisterFeature
+                0x00000000004a3e80       0x6a ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.UnregisterService
+                0x00000000004a3eea       0x9a ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.RegisterService
+                0x00000000004a3f84       0xaa ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.GetUninitializedPos
+                0x00000000004a402e       0x70 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.GetSpecifiedTaskPool
+                0x00000000004a409e       0x94 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.AddTaskPool
+                0x00000000004a4132      0x138 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.InitializeSingleService
+                0x00000000004a426a       0x5e ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.InitializeAllServices
+                0x00000000004a42c8       0xca ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.SendBootRequest
+                0x00000000004a4392       0x5a ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.InitCompleted
+                0x00000000004a43ec       0xc4 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.SAMGR_Bootstrap
+                0x00000000004a44b0      0x11a ohos/libs/libsamgr.a(samgr_lite.o)
+                0x00000000004a44b0                SAMGR_Bootstrap
+ .text.HandleInitRequest
+                0x00000000004a45ca       0xb0 ohos/libs/libsamgr.a(samgr_lite.o)
+ .text.SAMGR_GetInstance
+                0x00000000004a467a       0x3a ohos/libs/libsamgr.a(samgr_lite.o)
+                0x00000000004a467a                SAMGR_GetInstance
+ .text.SAMGR_GetServiceByID
+                0x00000000004a46b4       0x56 ohos/libs/libsamgr.a(samgr_lite.o)
+                0x00000000004a46b4                SAMGR_GetServiceByID
+ .text.SAMGR_RegisterServiceApi
+                0x00000000004a470a       0x26 ohos/libs/libsamgr.a(service_registry.o)
+                0x00000000004a470a                SAMGR_RegisterServiceApi
+ .text.SAMGR_FindServiceApi
+                0x00000000004a4730       0x26 ohos/libs/libsamgr.a(service_registry.o)
+                0x00000000004a4730                SAMGR_FindServiceApi
+ .text.SAMGR_Malloc
+                0x00000000004a4756       0x3a ohos/libs/libsamgr_adapter.a(memory_adapter.o)
+                0x00000000004a4756                SAMGR_Malloc
+ .text.SAMGR_Free
+                0x00000000004a4790       0x38 ohos/libs/libsamgr_adapter.a(memory_adapter.o)
+                0x00000000004a4790                SAMGR_Free
+ .text.QUEUE_Create
+                0x00000000004a47c8       0x3a ohos/libs/libsamgr_adapter.a(queue_adapter.o)
+                0x00000000004a47c8                QUEUE_Create
+ .text.QUEUE_Put
+                0x00000000004a4802       0x38 ohos/libs/libsamgr_adapter.a(queue_adapter.o)
+                0x00000000004a4802                QUEUE_Put
+ .text.QUEUE_Pop
+                0x00000000004a483a       0x3c ohos/libs/libsamgr_adapter.a(queue_adapter.o)
+                0x00000000004a483a                QUEUE_Pop
+ .text.QUEUE_Destroy
+                0x00000000004a4876       0x30 ohos/libs/libsamgr_adapter.a(queue_adapter.o)
+                0x00000000004a4876                QUEUE_Destroy
+ .text.MUTEX_InitValue
+                0x00000000004a48a6       0x2a ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a48a6                MUTEX_InitValue
+ .text.MUTEX_Lock
+                0x00000000004a48d0       0x2e ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a48d0                MUTEX_Lock
+ .text.MUTEX_Unlock
+                0x00000000004a48fe       0x2c ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a48fe                MUTEX_Unlock
+ .text.MUTEX_GlobalLock
+                0x00000000004a492a       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a492a                MUTEX_GlobalLock
+ .text.MUTEX_GlobalUnlock
+                0x00000000004a4952       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a4952                MUTEX_GlobalUnlock
+ .text.THREAD_Create
+                0x00000000004a497a       0x44 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a497a                THREAD_Create
+ .text.THREAD_Total
+                0x00000000004a49be       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a49be                THREAD_Total
+ .text.THREAD_GetThreadLocal
+                0x00000000004a49e6       0x28 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a49e6                THREAD_GetThreadLocal
+ .text.THREAD_SetThreadLocal
+                0x00000000004a4a0e       0x24 ohos/libs/libsamgr_adapter.a(thread_adapter.o)
+                0x00000000004a4a0e                THREAD_SetThreadLocal
+ .text.WDT_Reset
+                0x00000000004a4a32       0x26 ohos/libs/libsamgr_adapter.a(time_adapter.o)
+                0x00000000004a4a32                WDT_Reset
+ .text.WDT_Start
+                0x00000000004a4a58       0x28 ohos/libs/libsamgr_adapter.a(time_adapter.o)
+                0x00000000004a4a58                WDT_Start
+ .text.WDT_Stop
+                0x00000000004a4a80       0x26 ohos/libs/libsamgr_adapter.a(time_adapter.o)
+                0x00000000004a4a80                WDT_Stop
+ .text.SAMGR_GetProcessTime
+                0x00000000004a4aa6       0x2e ohos/libs/libsamgr_adapter.a(time_adapter.o)
+                0x00000000004a4aa6                SAMGR_GetProcessTime
+ .text.VECTOR_Make
+                0x00000000004a4ad4       0x34 ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4ad4                VECTOR_Make
+ .text.VECTOR_Clear
+                0x00000000004a4b08       0x3e ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4b08                VECTOR_Clear
+ .text.VECTOR_Add
+                0x00000000004a4b46       0xca ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4b46                VECTOR_Add
+ .text.VECTOR_At
+                0x00000000004a4c10       0x3e ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4c10                VECTOR_At
+ .text.VECTOR_Swap
+                0x00000000004a4c4e       0x4c ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4c4e                VECTOR_Swap
+ .text.VECTOR_FindByKey
+                0x00000000004a4c9a       0x6a ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4c9a                VECTOR_FindByKey
+ .text.VECTOR_Size
+                0x00000000004a4d04       0x2e ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4d04                VECTOR_Size
+ .text.VECTOR_Num
+                0x00000000004a4d32       0x3a ohos/libs/libsamgr_source.a(common.o)
+                0x00000000004a4d32                VECTOR_Num
+ .text.SAMGR_AddInterface
+                0x00000000004a4d6c       0x34 ohos/libs/libsamgr_source.a(feature.o)
+                0x00000000004a4d6c                SAMGR_AddInterface
+ .text.SAMGR_DelInterface
+                0x00000000004a4da0       0x30 ohos/libs/libsamgr_source.a(feature.o)
+                0x00000000004a4da0                SAMGR_DelInterface
+ .text.SAMGR_GetInterface
+                0x00000000004a4dd0       0x2c ohos/libs/libsamgr_source.a(feature.o)
+                0x00000000004a4dd0                SAMGR_GetInterface
+ .text.SAMGR_IsNoInterface
+                0x00000000004a4dfc       0x30 ohos/libs/libsamgr_source.a(feature.o)
+                0x00000000004a4dfc                SAMGR_IsNoInterface
+ .text.FEATURE_CreateInstance
+                0x00000000004a4e2c       0x3a ohos/libs/libsamgr_source.a(feature.o)
+                0x00000000004a4e2c                FEATURE_CreateInstance
+ .text.IUNKNOWN_AddRef
+                0x00000000004a4e66       0x3c ohos/libs/libsamgr_source.a(iunknown.o)
+                0x00000000004a4e66                IUNKNOWN_AddRef
+ .text.IUNKNOWN_QueryInterface
+                0x00000000004a4ea2       0x4c ohos/libs/libsamgr_source.a(iunknown.o)
+                0x00000000004a4ea2                IUNKNOWN_QueryInterface
+ .text.IUNKNOWN_Release
+                0x00000000004a4eee       0x3c ohos/libs/libsamgr_source.a(iunknown.o)
+                0x00000000004a4eee                IUNKNOWN_Release
+ .text.SharedSend
+                0x00000000004a4f2a       0x84 ohos/libs/libsamgr_source.a(message.o)
+ .text.FreeReference
+                0x00000000004a4fae       0x5a ohos/libs/libsamgr_source.a(message.o)
+ .text.SAMGR_SendRequest
+                0x00000000004a5008       0x66 ohos/libs/libsamgr_source.a(message.o)
+                0x00000000004a5008                SAMGR_SendRequest
+ .text.SAMGR_SendResponse
+                0x00000000004a506e       0x80 ohos/libs/libsamgr_source.a(message.o)
+                0x00000000004a506e                SAMGR_SendResponse
+ .text.SAMGR_MsgRecv
+                0x00000000004a50ee       0x52 ohos/libs/libsamgr_source.a(message.o)
+                0x00000000004a50ee                SAMGR_MsgRecv
+ .text.SAMGR_FreeMsg
+                0x00000000004a5140       0x52 ohos/libs/libsamgr_source.a(message.o)
+                0x00000000004a5140                SAMGR_FreeMsg
+ .text.SAMGR_SendSharedRequest
+                0x00000000004a5192       0x8e ohos/libs/libsamgr_source.a(message.o)
+                0x00000000004a5192                SAMGR_SendSharedRequest
+ .text.SAMGR_SendSharedDirectRequest
+                0x00000000004a5220       0xbc ohos/libs/libsamgr_source.a(message.o)
+                0x00000000004a5220                SAMGR_SendSharedDirectRequest
+ .text.SAMGR_SendResponseByIdentity
+                0x00000000004a52dc       0x46 ohos/libs/libsamgr_source.a(message.o)
+                0x00000000004a52dc                SAMGR_SendResponseByIdentity
+ .text.GetFeatureName
+                0x00000000004a5322       0x32 ohos/libs/libsamgr_source.a(service.o)
+ .text.SAMGR_CreateServiceImpl
+                0x00000000004a5354       0x7c ohos/libs/libsamgr_source.a(service.o)
+                0x00000000004a5354                SAMGR_CreateServiceImpl
+ .text.DEFAULT_AddFeature
+                0x00000000004a53d0       0x66 ohos/libs/libsamgr_source.a(service.o)
+                0x00000000004a53d0                DEFAULT_AddFeature
+ .text.DEFAULT_Initialize
+                0x00000000004a5436       0xb0 ohos/libs/libsamgr_source.a(service.o)
+                0x00000000004a5436                DEFAULT_Initialize
+ .text.DEFAULT_MessageHandle
+                0x00000000004a54e6       0x6c ohos/libs/libsamgr_source.a(service.o)
+                0x00000000004a54e6                DEFAULT_MessageHandle
+ .text.DEFAULT_GetFeature
+                0x00000000004a5552       0x3e ohos/libs/libsamgr_source.a(service.o)
+                0x00000000004a5552                DEFAULT_GetFeature
+ .text.DEFAULT_GetFeatureId
+                0x00000000004a5590       0x64 ohos/libs/libsamgr_source.a(service.o)
+                0x00000000004a5590                DEFAULT_GetFeatureId
+ .text.DEFAULT_DeleteFeature
+                0x00000000004a55f4       0x78 ohos/libs/libsamgr_source.a(service.o)
+                0x00000000004a55f4                DEFAULT_DeleteFeature
+ .text.ProcResponse
+                0x00000000004a566c       0x3c ohos/libs/libsamgr_source.a(task_manager.o)
+ .text.ProcDirectRequest
+                0x00000000004a56a8       0x3c ohos/libs/libsamgr_source.a(task_manager.o)
+ .text.CorrectServiceImpl
+                0x00000000004a56e4       0x46 ohos/libs/libsamgr_source.a(task_manager.o)
+ .text.BeginWork
+                0x00000000004a572a       0x5e ohos/libs/libsamgr_source.a(task_manager.o)
+ .text.ProcRequest
+                0x00000000004a5788       0x5a ohos/libs/libsamgr_source.a(task_manager.o)
+ .text.EndWork  0x00000000004a57e2       0xa2 ohos/libs/libsamgr_source.a(task_manager.o)
+ .text.TaskEntry
+                0x00000000004a5884       0x8a ohos/libs/libsamgr_source.a(task_manager.o)
+ .text.SAMGR_CreateFixedTaskPool
+                0x00000000004a590e       0xe2 ohos/libs/libsamgr_source.a(task_manager.o)
+                0x00000000004a590e                SAMGR_CreateFixedTaskPool
+ .text.SAMGR_StartTaskPool
+                0x00000000004a59f0       0xb0 ohos/libs/libsamgr_source.a(task_manager.o)
+                0x00000000004a59f0                SAMGR_StartTaskPool
+ .text.SAMGR_ReleaseTaskPool
+                0x00000000004a5aa0       0x66 ohos/libs/libsamgr_source.a(task_manager.o)
+                0x00000000004a5aa0                SAMGR_ReleaseTaskPool
+ .text.SAMGR_ReferenceTaskPool
+                0x00000000004a5b06       0x3a ohos/libs/libsamgr_source.a(task_manager.o)
+                0x00000000004a5b06                SAMGR_ReferenceTaskPool
+ .text.SAMGR_GetCurrentQueueID
+                0x00000000004a5b40       0x28 ohos/libs/libsamgr_source.a(task_manager.o)
+                0x00000000004a5b40                SAMGR_GetCurrentQueueID
  .text.InitWifiGlobalLock
                 0x00000000004a5b68       0x7a ohos/libs/libwifiservice.a(wifi_device_util.o)
  SORT_BY_NAME(*)(EXCLUDE_FILE(*libasm_flash.o) .got*)
@@ -35993,41 +35993,41 @@ Linker script and memory map
  .rodata.Initialize.str1.4
                 0x00000000004af478       0x15 ohos/libs/libhiview_lite.a(hiview_service.o)
  *fill*         0x00000000004af48d        0x3 
- .rodata.AddTaskPool.str1.4
-                0x00000000004af490       0x7e ohos/libs/libsamgr.a(samgr_lite.o)
- *fill*         0x00000000004af50e        0x2 
- .rodata.HandleInitRequest.str1.4
-                0x00000000004af510       0x56 ohos/libs/libsamgr.a(samgr_lite.o)
- *fill*         0x00000000004af566        0x2 
- .rodata.InitCompleted.str1.4
-                0x00000000004af568       0x59 ohos/libs/libsamgr.a(samgr_lite.o)
- *fill*         0x00000000004af5c1        0x3 
- .rodata.InitializeAllServices.str1.4
-                0x00000000004af5c4       0x1c ohos/libs/libsamgr.a(samgr_lite.o)
- .rodata.SAMGR_Bootstrap.str1.4
-                0x00000000004af5e0       0xf9 ohos/libs/libsamgr.a(samgr_lite.o)
- .rodata.SendBootRequest.str1.4
-                0x00000000004af6d9        0xa ohos/libs/libsamgr.a(samgr_lite.o)
- *fill*         0x00000000004af6d9        0x3 
- .rodata.SAMGR_SendSharedRequest.str1.4
-                0x00000000004af6dc       0x1c ohos/libs/libsamgr_source.a(message.o)
- .rodata.EndWork.str1.4
-                0x00000000004af6f8       0x47 ohos/libs/libsamgr_source.a(task_manager.o)
- *fill*         0x00000000004af73f        0x1 
- .rodata.SAMGR_CreateFixedTaskPool.str1.4
-                0x00000000004af740       0x48 ohos/libs/libsamgr_source.a(task_manager.o)
- .rodata.SAMGR_StartTaskPool.str1.4
-                0x00000000004af788       0x1f ohos/libs/libsamgr_source.a(task_manager.o)
- *fill*         0x00000000004af7a7        0x1 
  .rodata.Oled_MainLoop.str1.4
-                0x00000000004af7a8       0x33 ohos/libs/libssd1306.a(oled_demo.o)
- *fill*         0x00000000004af7db        0x1 
+                0x00000000004af490       0x33 ohos/libs/libqr_code.a(oled_demo.o)
+ *fill*         0x00000000004af4c3        0x1 
  .rodata.qr_code
-                0x00000000004af7dc      0x400 ohos/libs/libssd1306.a(oled_demo.o)
-                0x00000000004af7dc                qr_code
+                0x00000000004af4c4      0x400 ohos/libs/libqr_code.a(oled_demo.o)
+                0x00000000004af4c4                qr_code
  .rodata.ssd1306_UpdateScreen.str1.4
-                0x00000000004afbdc       0x32 ohos/libs/libssd1306.a(ssd1306.o)
- *fill*         0x00000000004afc0e        0x2 
+                0x00000000004af8c4       0x32 ohos/libs/libqr_code.a(ssd1306.o)
+ *fill*         0x00000000004af8f6        0x2 
+ .rodata.AddTaskPool.str1.4
+                0x00000000004af8f8       0x7e ohos/libs/libsamgr.a(samgr_lite.o)
+ *fill*         0x00000000004af976        0x2 
+ .rodata.HandleInitRequest.str1.4
+                0x00000000004af978       0x56 ohos/libs/libsamgr.a(samgr_lite.o)
+ *fill*         0x00000000004af9ce        0x2 
+ .rodata.InitCompleted.str1.4
+                0x00000000004af9d0       0x59 ohos/libs/libsamgr.a(samgr_lite.o)
+ *fill*         0x00000000004afa29        0x3 
+ .rodata.InitializeAllServices.str1.4
+                0x00000000004afa2c       0x1c ohos/libs/libsamgr.a(samgr_lite.o)
+ .rodata.SAMGR_Bootstrap.str1.4
+                0x00000000004afa48       0xf9 ohos/libs/libsamgr.a(samgr_lite.o)
+ .rodata.SendBootRequest.str1.4
+                0x00000000004afb41        0xa ohos/libs/libsamgr.a(samgr_lite.o)
+ *fill*         0x00000000004afb41        0x3 
+ .rodata.SAMGR_SendSharedRequest.str1.4
+                0x00000000004afb44       0x1c ohos/libs/libsamgr_source.a(message.o)
+ .rodata.EndWork.str1.4
+                0x00000000004afb60       0x47 ohos/libs/libsamgr_source.a(task_manager.o)
+ *fill*         0x00000000004afba7        0x1 
+ .rodata.SAMGR_CreateFixedTaskPool.str1.4
+                0x00000000004afba8       0x48 ohos/libs/libsamgr_source.a(task_manager.o)
+ .rodata.SAMGR_StartTaskPool.str1.4
+                0x00000000004afbf0       0x1f ohos/libs/libsamgr_source.a(task_manager.o)
+ *fill*         0x00000000004afc0f        0x1 
  .rodata.str1.4
                 0x00000000004afc10       0x1f ohos/libs/libwifiservice.a(wifi_device_util.o)
                 0x00000000004afc40                . = ALIGN (0x20)
@@ -36104,7 +36104,7 @@ Linker script and memory map
  *(.zinitcall.app.feature1.init)
  *(.zinitcall.app.feature2.init)
  .zinitcall.app.feature2.init
-                0x00000000004afc5c        0x4 ohos/libs/libssd1306.a(oled_demo.o)
+                0x00000000004afc5c        0x4 ohos/libs/libqr_code.a(oled_demo.o)
  *(.zinitcall.app.feature3.init)
  *(.zinitcall.app.feature4.init)
                 0x00000000004afc60                __zinitcall_app_feature_end = .
@@ -38895,11 +38895,11 @@ Linker script and memory map
                 0x00000000000e464c       0x14 ohos/libs/libhiview_lite.a(hiview_service.o)
  .bss.hiviewInfterface.1352
                 0x00000000000e4660        0x4 ohos/libs/libhiview_lite.a(hiview_service.o)
- .bss.g_samgrImpl
-                0x00000000000e4664       0x64 ohos/libs/libsamgr.a(samgr_lite.o)
- .bss.SSD1306   0x00000000000e46c8        0x8 ohos/libs/libssd1306.a(ssd1306.o)
+ .bss.SSD1306   0x00000000000e4664        0x8 ohos/libs/libqr_code.a(ssd1306.o)
  .bss.SSD1306_Buffer
-                0x00000000000e46d0      0x400 ohos/libs/libssd1306.a(ssd1306.o)
+                0x00000000000e466c      0x400 ohos/libs/libqr_code.a(ssd1306.o)
+ .bss.g_samgrImpl
+                0x00000000000e4a6c       0x64 ohos/libs/libsamgr.a(samgr_lite.o)
  .bss.g_wifiEventLock
                 0x00000000000e4ad0        0x4 ohos/libs/libwifiservice.a(wifi_device_util.o)
  .bss.g_wifiGlobalLock
@@ -38990,6 +38990,7 @@ LOAD ohos/libs/libnative_file.a
 LOAD ohos/libs/libpahomqtt_static.a
 LOAD build/build_tmp/libs/platform/system/libparttab.a
 LOAD build/build_tmp/libs/platform/drivers/libpwm.a
+LOAD ohos/libs/libqr_code.a
 LOAD build/libs/libres_cfg.a
 LOAD ohos/libs/libsamgr.a
 LOAD ohos/libs/libsamgr_adapter.a
@@ -38997,7 +38998,6 @@ LOAD ohos/libs/libsamgr_source.a
 LOAD build/libs/libsdio.a
 LOAD build/libs/libsec_flash.a
 LOAD build/libs/libspiffs.a
-LOAD ohos/libs/libssd1306.a
 LOAD ohos/libs/libsysparam.a
 LOAD build/libs/hi3861/release/no_mesh/libsystem.a
 LOAD ohos/libs/libtoken_static.a
@@ -39249,6 +39249,8 @@ OUTPUT(output/bin/Hi3861_wifiiot_app.out elf32-littleriscv)
  .comment       0x0000000000000097       0x12 ohos/libs/libnative_file.a(file.o)
  .comment       0x0000000000000097       0x12 build/build_tmp/libs/platform/system/libparttab.a(flash_partition_table.o)
  .comment       0x0000000000000097       0x12 build/build_tmp/libs/platform/drivers/libpwm.a(hi_pwm.o)
+ .comment       0x0000000000000097       0x12 ohos/libs/libqr_code.a(ssd1306.o)
+ .comment       0x0000000000000097       0x12 ohos/libs/libqr_code.a(oled_demo.o)
  .comment       0x0000000000000097       0x44 build/libs/libres_cfg.a(los_init_redirect.o)
  .comment       0x0000000000000097       0x44 build/libs/libres_cfg.a(los_tick_redirect.o)
  .comment       0x0000000000000097       0x44 build/libs/libres_cfg.a(los_track.o)
@@ -39274,8 +39276,6 @@ OUTPUT(output/bin/Hi3861_wifiiot_app.out elf32-littleriscv)
  .comment       0x0000000000000097       0x44 build/libs/libspiffs.a(spiffs_gc.o)
  .comment       0x0000000000000097       0x44 build/libs/libspiffs.a(spiffs_hydrogen.o)
  .comment       0x0000000000000097       0x44 build/libs/libspiffs.a(spiffs_nucleus.o)
- .comment       0x0000000000000097       0x12 ohos/libs/libssd1306.a(ssd1306.o)
- .comment       0x0000000000000097       0x12 ohos/libs/libssd1306.a(oled_demo.o)
  .comment       0x0000000000000097       0x44 build/libs/hi3861/release/no_mesh/libsystem.a(fpb_lib.o)
  .comment       0x0000000000000097       0x44 build/libs/hi3861/release/no_mesh/libsystem.a(patch_init.o)
  .comment       0x0000000000000097       0x44 build/libs/hi3861/release/no_mesh/libsystem.a(hi_nvm.o)

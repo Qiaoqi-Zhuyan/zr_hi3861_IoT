@@ -43,6 +43,7 @@ build pahomqtt_shared: phony obj/third_party/pahomqtt/pahomqtt_shared.stamp
 build pahomqtt_static: phony ./libs/libpahomqtt_static.a
 build parameter: phony obj/base/startup/frameworks/syspara_lite/parameter/parameter.stamp
 build parameter_notes: phony obj/base/startup/frameworks/syspara_lite/parameter/parameter_notes.stamp
+build qr_code: phony ./libs/libqr_code.a
 build run_wifiiot_scons: phony obj/vendor/hisi/hi3861/hi3861/run_wifiiot_scons.stamp
 build samgr_adapter: phony ./libs/libsamgr_adapter.a
 build samgr_lite_ndk: phony obj/foundation/distributedschedule/services/samgr_lite/samgr_lite_ndk.stamp
@@ -50,7 +51,6 @@ build samgr_source: phony ./libs/libsamgr_source.a
 build sdk: phony obj/vendor/hisi/hi3861/hi3861/sdk.stamp
 build softbus: phony obj/foundation/communication/services/softbus_lite/softbus.stamp
 build softbus_lite_ndk: phony obj/foundation/communication/services/softbus_lite/softbus_lite_ndk.stamp
-build ssd1306: phony ./libs/libssd1306.a
 build sysparam: phony ./libs/libsysparam.a
 build token: phony obj/base/startup/frameworks/syspara_lite/token/token.stamp
 build token_notes: phony obj/base/startup/frameworks/syspara_lite/token/token_notes.stamp
@@ -66,8 +66,8 @@ build wifiservice_ndk: phony obj/vendor/hisi/hi3861/hi3861_adapter/hals/communic
 build xdevice: phony obj/test/xdevice/xdevice.stamp
 build applications/sample/wifi-iot/app$:app: phony obj/applications/sample/wifi-iot/app/app.stamp
 build applications/sample/wifi-iot/app: phony obj/applications/sample/wifi-iot/app/app.stamp
-build applications/sample/wifi-iot/app/ssd1306$:ssd1306: phony ./libs/libssd1306.a
-build applications/sample/wifi-iot/app/ssd1306: phony ./libs/libssd1306.a
+build applications/sample/wifi-iot/app/qr_code$:qr_code: phony ./libs/libqr_code.a
+build applications/sample/wifi-iot/app/qr_code: phony ./libs/libqr_code.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite: phony ./libs/libhilog_lite.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite_ndk: phony obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp
 build base/hiviewdfx/services/hiview_lite$:hiview_lite: phony ./libs/libhiview_lite.a
@@ -145,7 +145,7 @@ build vendor/huawei/wifi-iot/hals/utils/token$:hal_token_static: phony ./libs/li
 
 build all: phony $
     obj/applications/sample/wifi-iot/app/app.stamp $
-    ./libs/libssd1306.a $
+    ./libs/libqr_code.a $
     ./libs/libhilog_lite.a $
     obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp $
     ./libs/libhiview_lite.a $
