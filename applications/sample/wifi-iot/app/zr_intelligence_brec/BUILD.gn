@@ -3,6 +3,7 @@ static_library("chapter_15")
     sources = 
     [
         "wifi_utils.c",
+        "msg_queue/mq.c"
         "mqtt_utils.c",
         "main.c",
     ]

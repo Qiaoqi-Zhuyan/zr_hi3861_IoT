@@ -11,7 +11,7 @@ static_library("func_test")
         "temp_humi_measure.c",
         "mqtt_task.c",
         "oled_task.c",
-        "mq.c"
+        "msg_queue/mq.c"
     ]
 
     include_dirs = 

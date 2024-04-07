@@ -1,4 +1,5 @@
 #include "mq.h"
+#include "include/msg_queue/mq.h"
 
 void init_queue(MQueue* queue){
     queue->front = 0;
@@ -51,7 +52,7 @@ void* pop(MQueue* queue){
 
     void* val = (void *)0;
     if(osMutexAcquire(queue->mutex, osWaitForever)==osOK){
-        if (queue->front != queue->rear){
+        if (!is_empty(queue)){
             val = queue->data[queue->front];
             queue->front = (queue->front + 1) % QUEUE_SIZE;
         }
@@ -75,7 +76,7 @@ void* peek(MQueue* queue){
     void* val = (void *)0;
 
     if(osMutexAcquire(queue->mutex, osWaitForever) == osOK){
-        if (queue->front != queue->rear){
+        if (!is_empty(queue)){
             val = queue->data[queue->front];
         }
 

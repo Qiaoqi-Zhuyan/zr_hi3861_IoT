@@ -7,7 +7,6 @@
 
 #include <unistd.h>
 #include "hi_wifi_api.h"
-// #include "wifi_sta.h"
 #include "lwip/ip_addr.h"
 #include "lwip/netifapi.h"
 
@@ -15,9 +14,7 @@
 
 #include "MQTTPacket.h"
 #include "transport.h"
-// #include "traffic_light.h"
 
-#define HOST_ADDR "192.168.203.202"
 
 int mqtt_connect(const char* host_addr)
 {
@@ -31,7 +28,7 @@ int mqtt_connect(const char* host_addr)
 	char payload[200] = "baidu.com"; // 发送数据
 	int payloadlen = strlen(payload);
 	int len = 0;
-	char *host = HOST_ADDR; // MQTT服务器的IP地址
+	char *host = host_addr; // MQTT服务器的IP地址
 	int port = 1883;
 
 	// 打开一个接口，并且和服务器 建立连接，创建socket连接mqtt服务器函数

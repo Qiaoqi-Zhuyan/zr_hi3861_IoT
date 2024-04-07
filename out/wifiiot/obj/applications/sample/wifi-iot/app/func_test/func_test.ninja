@@ -13,9 +13,9 @@ build obj/applications/sample/wifi-iot/app/func_test/gas_measure.o: cc ../../app
 build obj/applications/sample/wifi-iot/app/func_test/temp_humi_measure.o: cc ../../applications/sample/wifi-iot/app/func_test/temp_humi_measure.c
 build obj/applications/sample/wifi-iot/app/func_test/mqtt_task.o: cc ../../applications/sample/wifi-iot/app/func_test/mqtt_task.c
 build obj/applications/sample/wifi-iot/app/func_test/oled_task.o: cc ../../applications/sample/wifi-iot/app/func_test/oled_task.c
-build obj/applications/sample/wifi-iot/app/func_test/mq.o: cc ../../applications/sample/wifi-iot/app/func_test/mq.c
+build obj/applications/sample/wifi-iot/app/func_test/msg_queue/mq.o: cc ../../applications/sample/wifi-iot/app/func_test/msg_queue/mq.c
 
-build ./libs/libfunc_test.a: alink obj/applications/sample/wifi-iot/app/func_test/wifi_utils.o obj/applications/sample/wifi-iot/app/func_test/mqtt_utils.o obj/applications/sample/wifi-iot/app/func_test/main.o obj/applications/sample/wifi-iot/app/func_test/oled_ssd1306.o obj/applications/sample/wifi-iot/app/func_test/aht20.o obj/applications/sample/wifi-iot/app/func_test/gas_measure.o obj/applications/sample/wifi-iot/app/func_test/temp_humi_measure.o obj/applications/sample/wifi-iot/app/func_test/mqtt_task.o obj/applications/sample/wifi-iot/app/func_test/oled_task.o obj/applications/sample/wifi-iot/app/func_test/mq.o
+build ./libs/libfunc_test.a: alink obj/applications/sample/wifi-iot/app/func_test/wifi_utils.o obj/applications/sample/wifi-iot/app/func_test/mqtt_utils.o obj/applications/sample/wifi-iot/app/func_test/main.o obj/applications/sample/wifi-iot/app/func_test/oled_ssd1306.o obj/applications/sample/wifi-iot/app/func_test/aht20.o obj/applications/sample/wifi-iot/app/func_test/gas_measure.o obj/applications/sample/wifi-iot/app/func_test/temp_humi_measure.o obj/applications/sample/wifi-iot/app/func_test/mqtt_task.o obj/applications/sample/wifi-iot/app/func_test/oled_task.o obj/applications/sample/wifi-iot/app/func_test/msg_queue/mq.o
   arflags =
   output_extension = .a
   output_dir = ./libs

@@ -1,7 +1,7 @@
 #ifndef ____GAS_MEASURE_H___
 #define ____GAS_MEASURE_H___
 
-#include "mq.h"
+#include "msg_queue/mq.h"
 #include "cmsis_os2.h"
 
 extern MQueue gas_mq;
