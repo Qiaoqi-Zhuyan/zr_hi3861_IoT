@@ -16,6 +16,6 @@ import("//build/lite/config/component/lite_component.gni")
 lite_component("app") 
 {
     features = [
-        "qr_code:qr_code"
+        "func_test:func_test"
     ]
 }

@@ -15,6 +15,16 @@
 
 ```
 ----
+## schedule
+### 4-7
+- 线程安全mq
+- 血氧心率检测模块
+- 红外体温检测模块
+- 二维码信息模块
+- mqtt模块
+
+
+
 ## ref
 [深开鸿hi3861套件开发样例代码](https://gitee.com/organizations/KHDVK-3861B/projects)
 
