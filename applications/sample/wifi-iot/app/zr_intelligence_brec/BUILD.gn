@@ -1,16 +1,27 @@
-static_library("chapter_15") 
+static_library("zr_intelligence_brec") 
 {
     sources = 
     [
-        "wifi_utils.c",
-        "msg_queue/mq.c"
-        "mqtt_utils.c",
+        # mqtt module
+        "src/mqtt_io/wifi_utils.c",
+        "src/mqtt_io/mqtt_utils.c",
+        "src/mqtt_io/mqtt_task.c",
+
+        #"src/msg_queue/mq.c",
+        "src/msg.c",
+
+        #SpO2 and heartbeat detect module
+        "src/module_tasks/spo2_heart_det/MAX30102.c",
+        "src/module_tasks/spo2_heart_det/algorithm.c",
+        "src/module_tasks/spo2_heart_det/blood.c",
+        "src/module_tasks/spo2_heart_det/spo2_heart_det.c",
+
+        # main 
         "main.c",
     ]
 
     include_dirs = 
     [
-
         "//utils/native/lite/include",
         "//kernel/liteos_m/components/cmsis/2.0",
         "//base/iot_hardware/interfaces/kits/wifiiot_lite",
@@ -19,5 +30,6 @@ static_library("chapter_15")
         "//third_party/pahomqtt/MQTTPacket/src",
         "//third_party/pahomqtt/MQTTPacket/samples",
         "//vendor\hisi\hi3861\hi3861\components\at\src"
+
     ]
 }

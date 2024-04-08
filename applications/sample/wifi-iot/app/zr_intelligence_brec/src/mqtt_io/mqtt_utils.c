@@ -1,22 +1,31 @@
+// std
 #include <stdio.h>
-
 #include <unistd.h>
 
+//os
 #include "ohos_init.h"
 #include "cmsis_os2.h"
-
-#include <unistd.h>
 #include "hi_wifi_api.h"
 #include "lwip/ip_addr.h"
 #include "lwip/netifapi.h"
-
 #include "lwip/sockets.h"
-
 #include "MQTTPacket.h"
 #include "transport.h"
 
+// proj 
+#include "../msg_queue/mq.h"
+#include "../packages/mqtt_send_package.h"
+#include "../module_tasks/spo2_heart_det/blood.h"
+#include "../msg.h"
+#include "wifi_utils.h"
+#include "../module_tasks/spo2_heart_det/blood.h"
 
-int mqtt_connect(const char* host_addr)
+#define SSID "xiaoqi"
+#define PASSWORD "qazplmg3323"
+#define HOST_ADDR "192.168.92.202"
+
+
+int mqtt_connect(void)
 {
 	MQTTPacket_connectData data = MQTTPacket_connectData_initializer;
 	int mysock = 0;
@@ -25,10 +34,8 @@ int mqtt_connect(const char* host_addr)
 	int msgid = 1;
 	MQTTString topicString = MQTTString_initializer;
 	int req_qos = 0;
-	char payload[200] = "baidu.com"; // 发送数据
-	int payloadlen = strlen(payload);
 	int len = 0;
-	char *host = host_addr; // MQTT服务器的IP地址
+	char* host = HOST_ADDR; // MQTT服务器的IP地址
 	int port = 1883;
 
 	// 打开一个接口，并且和服务器 建立连接，创建socket连接mqtt服务器函数
@@ -41,10 +48,10 @@ int mqtt_connect(const char* host_addr)
 
 	printf("Sending to hostname %s port %d\n", host, port);
 
-	data.clientID.cstring = "liuy"; // 修改成自己名称，
+	data.clientID.cstring = "intel_brec_dev"; // 修改成自己名称，
 	data.keepAliveInterval = 20;	// 心跳时间
 	data.cleansession = 1;
-	data.username.cstring = "liuy";
+	data.username.cstring = "intel_brec_dev";
 	data.password.cstring = "1024";
 	// 数据封装成数据报文
 	len = MQTTSerialize_connect(buf, buflen, &data);
@@ -106,12 +113,29 @@ int mqtt_connect(const char* host_addr)
 			MQTTDeserialize_publish(&dup, &qos, &retained, &msgid, &receivedTopic, &payload_in, &payloadlen_in, buf, buflen);
 			printf("message arrived %d,%s\n", payloadlen_in, payload_in);
 		}
-		topicString.cstring = "publish"; // 发布设置主题
+		// 发送数据
+		topicString.cstring = "brec_pub"; // 发布设置主题
+		char payload[256];
 
-		len = MQTTSerialize_publish(buf, buflen, 0, 0, 0, 0, topicString, (unsigned char *)payload, payloadlen);
-		transport_sendPacketBuffer(mysock, buf, len);
+		if(blood_packet.id != 0x00){
+			sprintf(payload, "{\"id\" : %d, \"data\": %s}", blood_packet.id, blood_packet.data);
+			int payloadlen = strlen(payload);
+			len = MQTTSerialize_publish(buf, buflen, 0, 0, 0, 0, topicString, (unsigned char *)payload, payloadlen);
+			transport_sendPacketBuffer(mysock, buf, len);
+			blood_packet.id = 0x00;
+			usleep(100000);
+		}
 
-		usleep(100000);
+		
+
+/**
+ * id: 
+ * 0x04: 体温 temperature:uint8_t
+ * 0x05: 血氧 spo2:float, 心率 heart:int
+ * 
+*/		
+
+
 	}
 exit:
 	printf("disconnecting\n");
@@ -121,5 +145,4 @@ exit:
 
 	return 0;
 }
-
 

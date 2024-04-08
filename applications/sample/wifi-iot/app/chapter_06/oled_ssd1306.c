@@ -227,17 +227,3 @@ void OledShowChar(uint8_t x, uint8_t y, uint8_t ch, Font font)
     }
 }
 
-void ssd1306_DrawBitmap(const uint8_t* bitmap, uint32_t size)
-{
-    uint8_t rows = size * 8 / SSD1306_WIDTH;
-    if (rows > SSD1306_HEIGHT) {
-        rows = SSD1306_HEIGHT;
-    }
-    for (uint8_t y = 0; y < rows; y++) {
-        for (uint8_t x = 0; x < SSD1306_WIDTH; x++) {
-            uint8_t byte = bitmap[(y * SSD1306_WIDTH / 8) + (x / 8)];
-            uint8_t bit = byte & (0x80 >> (x % 8));
-            ssd1306_DrawPixel(x, y, bit ? White : Black);
-        }
-    }
-}

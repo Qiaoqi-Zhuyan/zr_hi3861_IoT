@@ -24,6 +24,7 @@
 static void main_task(void *arg)
 {
     (void)arg;
+    init_queue(&mq);
     gas_task();
     temp_humi_task();
     mqtt_task();

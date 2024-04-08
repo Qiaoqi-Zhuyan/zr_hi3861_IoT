@@ -12,23 +12,48 @@
 #include <at.h>
 #include <hi_at.h>
 
-//proj
-#include "mqtt_io/wifi_utils.h"
-#include "mqtt_io/mqtt_utils.h"
-
-
-#define SSID "xiaoqi"
-#define PASSWORD "qazplmg3323"
-#define HOST_ADDR "192.168.203.202"
+// proj
+#include "src/module_tasks/spo2_heart_det/spo2_heart_det.h"
+#include "src/msg_queue/mq.h"
+#include "src/mqtt_io/mqtt_task.h"
+// #include "src/msg_queue.h"
 
 
 /*
-mqtt 通讯任务
+静态函数：固定函数的作用域，
 */
-static void mqtt_task(void *arg)
+static void main_task(void *arg)
 {
     (void)arg;
-    connect_wifi(SSID, PASSWORD); // 连接WIFI热点
-    printf("begin mqtt task\n");
-    mqtt_connect(HOST_ADDR); // 运行mqtt测试程序
+    // init_queue(&mq);
+    sleep(1);
+    spo2_heart_task();
+    sleep(1);
+    mqtt_task();
 }
+
+
+// 在函数中创建新线程
+static void main_task_thread(void)
+{
+    osThreadAttr_t attr;
+
+    attr.name = "main_task_thread";
+    attr.attr_bits = 0U;
+    attr.cb_mem = NULL;
+    attr.cb_size = 0U;
+    attr.stack_mem = NULL;
+    attr.stack_size = 4096;
+    attr.priority = 36;
+
+    // 在新线程中执行函数mqtt_test_thread
+    if (osThreadNew((osThreadFunc_t)main_task, NULL, &attr) == NULL)
+    {
+        printf("[LedExample] Falied to create LedTask!\n");
+    }
+
+    AT_RESPONSE_OK;
+    // return HI_ERR_SUCCESS;
+}
+
+APP_FEATURE_INIT(main_task_thread);

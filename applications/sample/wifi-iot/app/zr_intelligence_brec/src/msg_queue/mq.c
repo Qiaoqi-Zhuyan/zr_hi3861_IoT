@@ -1,97 +1,52 @@
 #include "mq.h"
-#include "include/msg_queue/mq.h"
 
 void init_queue(MQueue* queue){
     queue->front = 0;
-    queue->rear = 0;
-    queue->mutex = osMutexNew(NULL);
-    
+    queue->rear = 0;    
 }
 
 int is_empty(MQueue* queue){
-    int isEmpty = 0;
-    if (osMutexAcquire(queue->mutex, osWaitForever) == osOK){
-        isEmpty = (queue->front == queue->rear);
-        osMutexRelease(queue->mutex);
-    }
-    return isEmpty;
+
+    return (queue->front == queue->rear);
+
 }
 
 int is_full(MQueue* queue){
-    int isFull = 0;
-    if(osMutexAcquire(queue->mutex, osWaitForever)== osOK){
-        isFull = ((queue->rear + 1)% QUEUE_SIZE == queue->front);
-        osMutexRelease(queue->mutex);
-    }
 
-    return isFull;
+    return ((queue->rear + 1)% QUEUE_SIZE == queue->front);
+
 }
 
 void push_back(MQueue* queue, void* val){
-
-    if(osMutexAcquire(queue->mutex, osWaitForever) == osOK){
         if(!is_full(queue)){
             queue->data[queue->rear] = val;
             queue->rear = (queue->rear + 1) % QUEUE_SIZE;
         }
-    }
-
-    osMutexRelease(queue->mutex);
-
-    // if (is_full(queue)){
-    //     return;
-    // }
-    // if(!is_full(queue)){
-    // queue->data[queue->rear] = val;
-    // queue->rear = (queue->rear + 1) % QUEUE_SIZE;
-    // }
 }
 
 
 void* pop(MQueue* queue){
 
     void* val = (void *)0;
-    if(osMutexAcquire(queue->mutex, osWaitForever)==osOK){
-        if (!is_empty(queue)){
-            val = queue->data[queue->front];
-            queue->front = (queue->front + 1) % QUEUE_SIZE;
-        }
 
-        osMutexRelease(queue->mutex);
+    if (!is_empty(queue)){
+        val = (queue->data[queue->front]);
+        queue->front = (queue->front + 1) % QUEUE_SIZE;
     }
 
-    return val;
 
-    // void* val = (void *)0;
-    // if(!is_empty(queue)){
-    //     val = queue->data[queue->front];
-    //     queue->front = (queue->front + 1) % QUEUE_SIZE;
-    //     return val;
-    // }
-    // else
-    //     return val;
+    return val;
 }
 
 void* peek(MQueue* queue){
     void* val = (void *)0;
 
-    if(osMutexAcquire(queue->mutex, osWaitForever) == osOK){
-        if (!is_empty(queue)){
-            val = queue->data[queue->front];
-        }
-
-        osMutexRelease(queue->mutex);
+    if (!is_empty(queue)){
+        val = queue->data[queue->front];
     }
 
-    return val;
 
-    // void* val = (void *)0;
-    // if(!is_empty(queue)){
-    //     val = queue->data[queue->front];
-    //     return val;
-    // }
-    // else
-    //     return val;
+    return val;
 }
 
 
