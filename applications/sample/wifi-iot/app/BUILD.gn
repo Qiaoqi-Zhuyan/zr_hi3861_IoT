@@ -16,6 +16,6 @@ import("//build/lite/config/component/lite_component.gni")
 lite_component("app") 
 {
     features = [
-        "zr_intel_brec:zr_intel_brec"
+        "th40:th40"
     ]
 }

@@ -11,11 +11,23 @@
 
 #define OLED_TASK_STACK_SIZE 4096
 
+#define INTERVAL_TIME_US 500 * 1000
+#define TASK_STACK_SIZE 512
+#define TASK_PRIO 25
+
 void oled_init(void)
 {
+    // oled screen init
     GpioInit();
     OledInit();
+
+    // led light init
+    IoSetFunc(WIFI_IOT_IO_NAME_GPIO_10|WIFI_IOT_IO_NAME_GPIO_11|WIFI_IOT_IO_NAME_GPIO_12, WIFI_IOT_IO_FUNC_GPIO_10_GPIO|WIFI_IOT_IO_FUNC_GPIO_11_GPIO|WIFI_IOT_IO_FUNC_GPIO_12_GPIO);
+    GpioSetDir(WIFI_IOT_IO_NAME_GPIO_10, WIFI_IOT_GPIO_DIR_OUT);
+    GpioSetDir(WIFI_IOT_IO_NAME_GPIO_11, WIFI_IOT_GPIO_DIR_OUT);
+    GpioSetDir(WIFI_IOT_IO_NAME_GPIO_12, WIFI_IOT_GPIO_DIR_OUT);
 }
+
 
 static void oled_disp(void *arg)
 {
@@ -23,10 +35,12 @@ static void oled_disp(void *arg)
     oled_init();
     OledFillScreen(0x00);       // 清屏
     OledShowString(0, 0, "Hello, HarmonyOS", 2);
+    OledFillScreen(0x00);
     sleep(1);
 
     while(1){
 
+        // oled 显示屏部分
         unsigned short gas_data = get_gas_data();
         float temp = get_temp_data();
         float humi = get_humi_data();
@@ -41,6 +55,22 @@ static void oled_disp(void *arg)
         OledFillScreen(0x00);
         OledShowString(0, 0, humi_str, 2), sleep(2);
         OledFillScreen(0x00);
+
+
+        // led light 
+
+        // 红灯
+        if(temp < 10.0f) GpioSetOutputVal(WIFI_IOT_IO_NAME_GPIO_10, 1);
+        else GpioSetOutputVal(WIFI_IOT_IO_NAME_GPIO_10, 0);
+
+        // 绿灯
+        if(temp > 28.0f) GpioSetOutputVal(WIFI_IOT_IO_NAME_GPIO_11, 1);
+        else GpioSetOutputVal(WIFI_IOT_IO_NAME_GPIO_11, 0);
+
+        // 黄灯
+        if(humi < 50.0f) GpioSetOutputVal(WIFI_IOT_IO_NAME_GPIO_12, 1);
+        else GpioSetOutputVal(WIFI_IOT_IO_NAME_GPIO_12, 0);
+
     }
 }
 

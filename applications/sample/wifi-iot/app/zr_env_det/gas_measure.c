@@ -44,7 +44,7 @@ static void ADC_Task(void *arg)
     GpioInit();
     IoSetFunc(WIFI_IOT_IO_NAME_GPIO_9, WIFI_IOT_IO_FUNC_GPIO_9_PWM0_OUT);
     PwmInit(WIFI_IOT_PWM_PORT_PWM0);
-    uint16_t freqDivisor = 34052;
+    // uint16_t freqDivisor = 34052;
     SendPacket packet;
 
     while (1)
@@ -60,10 +60,10 @@ static void ADC_Task(void *arg)
             printf("{\"gas\": %d }\n", gas_data);
         }
 
-        if (gas_data > 1000)
-            PwmStart(WIFI_IOT_PWM_PORT_PWM0, freqDivisor / 2, freqDivisor);
-        else
-            PwmStop(WIFI_IOT_PWM_PORT_PWM0);
+        // if (gas_data > 1000)
+        //     PwmStart(WIFI_IOT_PWM_PORT_PWM0, freqDivisor / 2, freqDivisor);
+        // else
+        //     PwmStop(WIFI_IOT_PWM_PORT_PWM0);
 
         sleep(1);
     }
