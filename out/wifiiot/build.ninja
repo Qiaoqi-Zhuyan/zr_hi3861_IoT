@@ -51,7 +51,6 @@ build sdk: phony obj/vendor/hisi/hi3861/hi3861/sdk.stamp
 build softbus: phony obj/foundation/communication/services/softbus_lite/softbus.stamp
 build softbus_lite_ndk: phony obj/foundation/communication/services/softbus_lite/softbus_lite_ndk.stamp
 build sysparam: phony ./libs/libsysparam.a
-build th40: phony ./libs/libth40.a
 build token: phony obj/base/startup/frameworks/syspara_lite/token/token.stamp
 build token_notes: phony obj/base/startup/frameworks/syspara_lite/token/token_notes.stamp
 build token_static: phony ./libs/libtoken_static.a
@@ -64,10 +63,11 @@ build wifiiot_sdk: phony obj/vendor/hisi/hi3861/hi3861/wifiiot_sdk.stamp
 build wifiservice: phony ./libs/libwifiservice.a
 build wifiservice_ndk: phony obj/vendor/hisi/hi3861/hi3861_adapter/hals/communication/wifi_lite/wifiservice/wifiservice_ndk.stamp
 build xdevice: phony obj/test/xdevice/xdevice.stamp
+build zr_env_det: phony ./libs/libzr_env_det.a
 build applications/sample/wifi-iot/app$:app: phony obj/applications/sample/wifi-iot/app/app.stamp
 build applications/sample/wifi-iot/app: phony obj/applications/sample/wifi-iot/app/app.stamp
-build applications/sample/wifi-iot/app/th40$:th40: phony ./libs/libth40.a
-build applications/sample/wifi-iot/app/th40: phony ./libs/libth40.a
+build applications/sample/wifi-iot/app/zr_env_det$:zr_env_det: phony ./libs/libzr_env_det.a
+build applications/sample/wifi-iot/app/zr_env_det: phony ./libs/libzr_env_det.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite: phony ./libs/libhilog_lite.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite_ndk: phony obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp
 build base/hiviewdfx/services/hiview_lite$:hiview_lite: phony ./libs/libhiview_lite.a
@@ -145,7 +145,7 @@ build vendor/huawei/wifi-iot/hals/utils/token$:hal_token_static: phony ./libs/li
 
 build all: phony $
     obj/applications/sample/wifi-iot/app/app.stamp $
-    ./libs/libth40.a $
+    ./libs/libzr_env_det.a $
     ./libs/libhilog_lite.a $
     obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp $
     ./libs/libhiview_lite.a $

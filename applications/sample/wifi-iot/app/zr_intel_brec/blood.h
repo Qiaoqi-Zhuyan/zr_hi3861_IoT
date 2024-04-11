@@ -6,7 +6,7 @@
 #include "mq.h"
 #include "mqtt_send_package.h"
 extern MQueue mq;
-extern SendPacket packet;
+extern SendPacket blood_packet;
 
 
 typedef enum

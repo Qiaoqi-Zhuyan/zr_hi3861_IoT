@@ -21,7 +21,7 @@
 
 #define SSID "xiaoqi"
 #define PASSWORD "qazplmg3323"
-#define HOST_ADDR "192.168.92.202"
+// #define HOST_ADDR "192.168.92.202"
 
 
 /*

@@ -45,7 +45,7 @@ static void ADC_Task(void *arg)
     IoSetFunc(WIFI_IOT_IO_NAME_GPIO_9, WIFI_IOT_IO_FUNC_GPIO_9_PWM0_OUT);
     PwmInit(WIFI_IOT_PWM_PORT_PWM0);
     // uint16_t freqDivisor = 34052;
-    SendPacket packet;
+    // SendPacket packet;
 
     while (1)
     {
@@ -53,9 +53,9 @@ static void ADC_Task(void *arg)
         {
             // void* gs = (int *)malloc(sizeof(gas_data));
             // memcpy(gs, gas_data);
-            packet.id = 0x2A;
-            packet.data = &gas_data;
-            push_back(&mq, &packet);
+            // packet.id = 0x2A;
+            // packet.data = &gas_data;
+            // push_back(&mq, &packet);
             // osMessageQueuePut(gas_mq_id, &gas_data, 31U, 1U);
             printf("{\"gas\": %d }\n", gas_data);
         }

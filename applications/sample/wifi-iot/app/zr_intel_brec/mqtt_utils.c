@@ -19,12 +19,12 @@
 #include "IR_MeasureTemp.h"
 #define SSID "xiaoqi"
 #define PASSWORD "qazplmg3323"
-#define HOST_ADDR "192.168.92.202"
+#define HOST_ADDR "8.138.0.106"
 
 
-int msg_cnt = 0;
-int temp_msg_cnt = 0;
-int spo2_msg_cnt = 0;
+// int msg_cnt = 0;
+// int temp_msg_cnt = 0;
+// int spo2_msg_cnt = 0;
 
 int mqtt_connect(void)
 {
@@ -121,7 +121,7 @@ int mqtt_connect(void)
 
 		char payload[256];
 		if(blood_packet.id != 0x00){
-			sprintf(payload, "{\"id\" : %d, \"msg_cnt\": %d ,\"data\": %s}", blood_packet.id, ++msg_cnt ,blood_packet.data);
+			sprintf(payload, "{\"id\" : %d, \"data\": %s}", blood_packet.id, blood_packet.data);
 			int payloadlen = strlen(payload);
 			len = MQTTSerialize_publish(buf, buflen, 0, 0, 0, 0, topicString, (unsigned char *)payload, payloadlen);
 			transport_sendPacketBuffer(mysock, buf, len);
@@ -129,7 +129,7 @@ int mqtt_connect(void)
 			usleep(100000);
 		}
 		if (temp_packet.id != 0x00){
-			sprintf(payload, "{\"id\" : %d, \"msg_cnt\": %d ,\"data\": %s}", temp_packet.id, ++temp_msg_cnt, temp_packet.data);
+			sprintf(payload, "{\"id\" : %d, \"data\": %s}", temp_packet.id, temp_packet.data);
 			int payloadlen = strlen(payload);
 			len = MQTTSerialize_publish(buf, buflen, 0, 0, 0, 0, topicString, (unsigned char *)payload, payloadlen);
 			transport_sendPacketBuffer(mysock, buf, len);

@@ -22,7 +22,7 @@
 #include "temp_humi_measure.h"
 #include "packet.h"
 
-#define HOST_ADDR "192.168.92.202"
+#define HOST_ADDR "8.138.0.106"
 
 
 // MQueue gas_mq;
@@ -30,9 +30,9 @@
 // osMessageQueueId_t th_mq_id;
 // osMessageQueueId_t gas_mq_id;
 
-int gas_msg_cnt = 0;
-int temp_msg_cnt = 0;
-int humi_msg_cnt = 0;
+// int gas_msg_cnt = 0;
+// int temp_msg_cnt = 0;
+// int humi_msg_cnt = 0;
 
 int mqtt_connect(void)
 {
@@ -133,6 +133,10 @@ int mqtt_connect(void)
         float temp;
         float humi;
 
+		(void)gas_data;
+		(void)temp;
+		(void)humi;
+		(void)gas_data;
 		// osStatus_t gas_s = osMessageQueueGet(gas_mq_id, &gas_data, (uint8_t *)31, 1);
 		// osStatus_t temp_s = osMessageQueueGet(th_mq_id, &temp, (uint8_t *)32U, 1);
 		// osStatus_t humi_s = osMessageQueueGet(th_mq_id, &humi, (uint8_t *)32U, 1);
@@ -157,20 +161,25 @@ int mqtt_connect(void)
 		 * 0x3A: 湿度 heart:int
 		 * 
 		*/
-		if (packet.id == 0x1A){
-			temp = *((float *)packet.data);
-			sprintf(payload, "{\"id\": 0x1A, \"temp\": %.2f, \"msg_cnt\": %d}", temp, ++temp_msg_cnt);
+		// if (packet.id == 0x1A){
+		// 	temp = *((float *)packet.data);
+		// 	sprintf(payload, "{\"id\" : 0x1A , \"data\": {\"temp\": %.2f}}", temp);
+		// }
+
+		// if(packet.id == 0x2A){
+		// 	gas_data = *((int *)packet.data);
+		// 	sprintf(payload, "{\"id\": 0x2A, \"gas\": %d}", gas_data);
+		// }
+
+		// if(packet.id == 0x3A){
+		// 	humi = *((float *)packet.data);
+		// 	sprintf(payload, "{\"id\" : 0x3A , \"data\": {\"humi\": %.2f, \"temp\": %.2f}}", humi, temp);
+		// }
+
+		if(packet.id == 0x2B){
+			sprintf(payload, "{\"id\" : %d, \"data\": %s}", packet.id, packet.data);
 		}
 
-		if(packet.id == 0x2A){
-			gas_data = *((int *)packet.data);
-			sprintf(payload, "{\"id\": 0x2A, \"gas\": %d, \"msg_cnt\": %d}", gas_data, ++gas_msg_cnt);
-		}
-
-		if(packet.id == 0x3A){
-			humi = *((float *)packet.data);
-			sprintf(payload, "{\"id\": 0x3A, \"humi\": %.2f, \"msg_cnt\": %d}", humi, ++humi_msg_cnt);
-		}
 
 		// if(t == (void *)0 || m == (void *)0){
 		// 	temp = -999.0f;

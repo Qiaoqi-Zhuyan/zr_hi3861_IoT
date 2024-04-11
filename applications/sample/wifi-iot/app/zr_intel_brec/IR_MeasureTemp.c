@@ -91,7 +91,8 @@ void Ir_Task(void *arg)
         Measure_Temp(REFERENCE_ADC_CHANNEL, &base_volt);
         Temperature_Transverter(ntc_volt / 10, volt_diff, &s_Temp);
 
-        temp_packet.id = 0x04;
+       
+        temp_packet.id = (s_Temp > 46 || s_Temp < 32) ? 0x00:0x04;
         sprintf(temp_packet.data, "{\"temperature\": %d}", s_Temp);
 
 

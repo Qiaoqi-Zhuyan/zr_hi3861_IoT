@@ -12,6 +12,6 @@
 */
 typedef struct mqtt_send_package{
     uint8_t id;
-    void* data;
+    char data[128];
 }SendPacket;
 

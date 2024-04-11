@@ -329,6 +329,7 @@ void blood_Loop(void)
 	// OLED_Printf_EN(4,0,"SpO2:%2.2f%%  ",g_blooddata.SpO2);
 
 	blood_packet.id = isnan(g_blooddata.SpO2) || isnan((float)g_blooddata.heart)? 0x00: 0x05;
+	if(g_blooddata.heart < 0) blood_packet.id = 0x00;
 	sprintf(blood_packet.data, "{\"spo2\": %.2f, \"heart\": %d}", g_blooddata.SpO2, g_blooddata.heart);
 	
 	// printf("[blood.c recv]id:%d heart:%d, SpO2:%0.2f\n",packet.id,heart, spo2);
