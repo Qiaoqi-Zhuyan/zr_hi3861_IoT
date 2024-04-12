@@ -29,6 +29,9 @@ static void main_task(void *arg)
     temp_humi_task();
     mqtt_task();
     oled_task();
+    //led_task();
+   
+
 }
 
 
@@ -43,7 +46,7 @@ static void main_task_thread(void)
     attr.cb_size = 0U;
     attr.stack_mem = NULL;
     attr.stack_size = 4096;
-    attr.priority = 36;
+    attr.priority = 12;
 
     // 在新线程中执行函数mqtt_test_thread
     if (osThreadNew((osThreadFunc_t)main_task, NULL, &attr) == NULL)

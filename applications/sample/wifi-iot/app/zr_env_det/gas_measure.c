@@ -57,7 +57,7 @@ static void ADC_Task(void *arg)
             // packet.data = &gas_data;
             // push_back(&mq, &packet);
             // osMessageQueuePut(gas_mq_id, &gas_data, 31U, 1U);
-            printf("{\"gas\": %d }\n", gas_data);
+            // printf("{\"gas\": %d }\n", gas_data);
         }
 
         // if (gas_data > 1000)

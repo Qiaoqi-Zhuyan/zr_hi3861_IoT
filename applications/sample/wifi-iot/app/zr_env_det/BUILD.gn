@@ -11,6 +11,7 @@ static_library("zr_env_det")
         "temp_humi_measure.c",
         "mqtt_task.c",
         "oled_task.c",
+        #"control_task.c",
         "msg_queue/mq.c"
     ]
 

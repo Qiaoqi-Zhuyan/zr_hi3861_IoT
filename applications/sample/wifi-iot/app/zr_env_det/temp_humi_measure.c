@@ -55,20 +55,14 @@ void I2C_task(void *arg){
         // push_back(&temp_humi_mq, &temperature);
         // push_back(&temp_humi_mq, &humidity);
         
-        // packet1.id = 0x1A;
-        // packet1.data = &temperature;
-        // push_back(&mq, &packet1);
-
-        // packet2.id = 0x3A;
-        // packet2.data = &humidity;
-        // push_back(&mq, &packet2);
+    
         
         packet2.id = 0x2B;
         // char data[128];
         sprintf(packet2.data,"{\"temp\": %.2f, \"humi\": %.2f}",temperature, humidity);
         push_back(&mq, &packet2);
 
-        printf("{\"temp\": %.2f, \" humi\": %.2f}", temperature, humidity);
+        // printf("{\"temp\": %.2f, \" humi\": %.2f}", temperature, humidity);
         
         sleep(1);
     }

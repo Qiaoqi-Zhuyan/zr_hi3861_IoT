@@ -121,7 +121,7 @@ int mqtt_connect(void)
 
 		char payload[256];
 		if(blood_packet.id != 0x00){
-			sprintf(payload, "{\"id\" : %d, \"data\": %s}", blood_packet.id, blood_packet.data);
+			sprintf(payload, "{\"id\" : %d, \"device_id\": 1 ,\"data\": %s}", blood_packet.id, blood_packet.data);
 			int payloadlen = strlen(payload);
 			len = MQTTSerialize_publish(buf, buflen, 0, 0, 0, 0, topicString, (unsigned char *)payload, payloadlen);
 			transport_sendPacketBuffer(mysock, buf, len);
@@ -129,7 +129,7 @@ int mqtt_connect(void)
 			usleep(100000);
 		}
 		if (temp_packet.id != 0x00){
-			sprintf(payload, "{\"id\" : %d, \"data\": %s}", temp_packet.id, temp_packet.data);
+			sprintf(payload, "{\"id\" : %d, \"device_id\": 1 ,\"data\": %s}", temp_packet.id, temp_packet.data);
 			int payloadlen = strlen(payload);
 			len = MQTTSerialize_publish(buf, buflen, 0, 0, 0, 0, topicString, (unsigned char *)payload, payloadlen);
 			transport_sendPacketBuffer(mysock, buf, len);

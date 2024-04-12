@@ -21,18 +21,19 @@
 #include "gas_measure.h"
 #include "temp_humi_measure.h"
 #include "packet.h"
+#include "control_task.h"
+#include "oled_task.h"
 
 #define HOST_ADDR "8.138.0.106"
-
-
-// MQueue gas_mq;
-// MQueue temp_humi_mq;
-// osMessageQueueId_t th_mq_id;
-// osMessageQueueId_t gas_mq_id;
 
 // int gas_msg_cnt = 0;
 // int temp_msg_cnt = 0;
 // int humi_msg_cnt = 0;
+
+
+int air_condition;
+int temperature_change;
+int humidifier;
 
 int mqtt_connect(void)
 {
@@ -84,7 +85,7 @@ int mqtt_connect(void)
 		goto exit;
 
 	/* subscribe 订阅主题 */
-	topicString.cstring = "subtopic";
+	topicString.cstring = "device_sub";
 	
 	len = MQTTSerialize_subscribe(buf, buflen, 0, msgid, 1, &topicString, &req_qos); // 打包橙订阅主题包保存在buf中
 	transport_sendPacketBuffer(mysock, buf, len);									 // 客户端发送订阅主题至服务器
@@ -123,10 +124,34 @@ int mqtt_connect(void)
 			// MQTTSerialize_publish  构造PUBLISH报文的函数，需要发送消息的依靠此函数构造报文
 			// MQTTDeserialize_publish  函数是解析PUBLISH报文的函数，接收消息就靠它
 			MQTTDeserialize_publish(&dup, &qos, &retained, &msgid, &receivedTopic, &payload_in, &payloadlen_in, buf, buflen);
-			int water_pump_level = atoi((char *)payload_in);
-			printf("message arrived %d, %d\n", payloadlen_in, water_pump_level);
-		}
+			//int water_pump_level = atoi((char *)payload_in);
+			int receive_msg = atoi((char *)payload_in);
+			
+			switch (receive_msg)
+			{
+			case 100:
+				air_condition = 1;
+				break;
+			case 101:
+				air_condition = 0;
+				break;
+			case 200:
+				temperature_change = 1;
+				break;
+			case 300:
+				humidifier = 1;
+				break;
+			case 301:
+				humidifier = 0;
+				break;
+			default:
+				break;
+			}
 
+			printf("message arrived %d, %d\n", payloadlen_in, receive_msg);
+			//usleep(100000);
+		}
+		usleep(100000);
 		topicString.cstring = "env_pub"; // 发布设置主题
 
 		unsigned short gas_data;
@@ -137,20 +162,10 @@ int mqtt_connect(void)
 		(void)temp;
 		(void)humi;
 		(void)gas_data;
-		// osStatus_t gas_s = osMessageQueueGet(gas_mq_id, &gas_data, (uint8_t *)31, 1);
-		// osStatus_t temp_s = osMessageQueueGet(th_mq_id, &temp, (uint8_t *)32U, 1);
-		// osStatus_t humi_s = osMessageQueueGet(th_mq_id, &humi, (uint8_t *)32U, 1);
+
 		// (void)gas_s, (void)temp_s, (void)humi_s;
 
 		char payload[128];
-		// void* t = pop(&temp_humi_mq);
-		// void* m = pop(&temp_humi_mq);
-		// void* g = pop(&gas_mq);
-
-		// temp = *((float *)t);
-		// humi = *((float *)m);
-		// gas_data = *((int *)g);
-		// (void)gas_data;
 
 		void * p = pop(&mq);
 		SendPacket packet = *((SendPacket *)p);
@@ -177,38 +192,8 @@ int mqtt_connect(void)
 		// }
 
 		if(packet.id == 0x2B){
-			sprintf(payload, "{\"id\" : %d, \"data\": %s}", packet.id, packet.data);
+			sprintf(payload, "{\"id\" : %d, \"room\": \"A410\", \"data\": %s}", packet.id, packet.data);
 		}
-
-
-		// if(t == (void *)0 || m == (void *)0){
-		// 	temp = -999.0f;
-		// 	humi = -999.0f;
-		// }else{
-		// 	temp = *((float *)t);
-		// 	humi = *((float *)m);
-		// }
-
-		// if (g == (void *)0){
-		// 	gas_data = -999;
-		// }else{
-		// 	gas_data = *((int *)g);
-		// }
-
-
-		// if (t == NULL || m == NULL){
-		// 	printf("temp or humi datais null");
-		// 	sleep(1);
-		// 	continue;
-		// } 
-
-		// if (g == NULL){
-		// 	printf("gas data is null");
-		// 	sleep(1);
-		// 	continue;
-		// }
-
-		// sprintf(payload, "{\"temp\": %.2f, \"humi\": %.2f}", temp, humi);
 
 	    int payloadlen = strlen(payload);
 
