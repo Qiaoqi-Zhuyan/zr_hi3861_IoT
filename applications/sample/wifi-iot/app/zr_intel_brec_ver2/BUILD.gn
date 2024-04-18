@@ -1,0 +1,45 @@
+static_library("zr_intel_brec_ver2") 
+{
+    sources = 
+    [
+        # mqtt module
+        "wifi_utils.c",
+        "mqtt_utils.c",
+        "mqtt_task.c",
+
+        # message queue
+        "mq.c",
+      
+
+        #SpO2 and heartbeat detect module
+        "MAX30102.c",
+        "algorithm.c",
+        "blood.c",
+        "spo2_heart_det.c",
+
+        # temperature detect module
+        "IR_MeasureTemp.c",
+        "Table.c",
+
+        #oled task
+        "ssd1306.c",
+        "ssd1306_fonts.c",
+        "oled_task.c",
+
+        # main 
+        "main.c",
+    ]
+
+    include_dirs = 
+    [
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/components/cmsis/2.0",
+        "//base/iot_hardware/interfaces/kits/wifiiot_lite",
+        "//vendor/hisi/hi3861/hi3861/third_party/lwip_sack/include",
+        "//foundation/communication/interfaces/kits/wifi_lite/wifiservice",
+        "//third_party/pahomqtt/MQTTPacket/src",
+        "//third_party/pahomqtt/MQTTPacket/samples",
+        "//vendor\hisi\hi3861\hi3861\components\at\src"
+
+    ]
+}

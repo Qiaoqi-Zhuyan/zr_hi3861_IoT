@@ -111,7 +111,7 @@ int mqtt_connect(void)
 	{
 		/* transport_getdata() has a built-in 1 second timeout,
 		your mileage will vary */
-		if (MQTTPacket_read(buf, buflen, transport_getdata) == PUBLISH)
+		while (MQTTPacket_read(buf, buflen, transport_getdata) == PUBLISH)
 		{
 			unsigned char dup;
 			int qos;
@@ -124,8 +124,9 @@ int mqtt_connect(void)
 			// MQTTSerialize_publish  构造PUBLISH报文的函数，需要发送消息的依靠此函数构造报文
 			// MQTTDeserialize_publish  函数是解析PUBLISH报文的函数，接收消息就靠它
 			MQTTDeserialize_publish(&dup, &qos, &retained, &msgid, &receivedTopic, &payload_in, &payloadlen_in, buf, buflen);
-			//int water_pump_level = atoi((char *)payload_in);
-			int receive_msg = atoi((char *)payload_in);
+			char recv_str[128];
+			strncpy(recv_str, (char *)payload_in, payloadlen_in);
+			int receive_msg = atoi((char *)recv_str);
 			
 			switch (receive_msg)
 			{

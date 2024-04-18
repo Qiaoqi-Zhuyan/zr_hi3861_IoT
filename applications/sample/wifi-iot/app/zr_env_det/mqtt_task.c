@@ -13,8 +13,8 @@
 #include <hi_at.h>
 
 
-#define SSID "xiaoqi"
-#define PASSWORD "qazplmg3323"
+#define SSID "Eawen"
+#define PASSWORD "testspeed900"
 
 static void mqtt_thread(void *arg)
 {

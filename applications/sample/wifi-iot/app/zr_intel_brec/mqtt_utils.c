@@ -17,9 +17,12 @@
 #include "wifi_utils.h"
 #include "blood.h"
 #include "IR_MeasureTemp.h"
-#define SSID "xiaoqi"
-#define PASSWORD "qazplmg3323"
-#define HOST_ADDR "8.138.0.106"
+#include "config.h"
+
+
+// #define SSID "xiaoqi"
+// #define PASSWORD "qazplmg3323"
+// #define HOST_ADDR "8.138.0.106"
 
 
 // int msg_cnt = 0;
@@ -74,7 +77,7 @@ int mqtt_connect(void)
 		goto exit;
 
 	/* subscribe 订阅主题 */
-	topicString.cstring = "subtopic";
+	topicString.cstring = "brec_device_sub";
 	len = MQTTSerialize_subscribe(buf, buflen, 0, msgid, 1, &topicString, &req_qos); // 打包橙订阅主题包保存在buf中
 	transport_sendPacketBuffer(mysock, buf, len);									 // 客户端发送订阅主题至服务器
 	if (MQTTPacket_read(buf, buflen, transport_getdata) == SUBACK)					 /* 等待服务器返回订阅主题ACK响应包 */
@@ -99,7 +102,7 @@ int mqtt_connect(void)
 	{
 		/* transport_getdata() has a built-in 1 second timeout,
 		your mileage will vary */
-		if (MQTTPacket_read(buf, buflen, transport_getdata) == PUBLISH)
+		while (MQTTPacket_read(buf, buflen, transport_getdata) == PUBLISH)
 		{
 			unsigned char dup;
 			int qos;

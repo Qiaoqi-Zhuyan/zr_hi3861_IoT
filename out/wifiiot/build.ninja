@@ -63,11 +63,11 @@ build wifiiot_sdk: phony obj/vendor/hisi/hi3861/hi3861/wifiiot_sdk.stamp
 build wifiservice: phony ./libs/libwifiservice.a
 build wifiservice_ndk: phony obj/vendor/hisi/hi3861/hi3861_adapter/hals/communication/wifi_lite/wifiservice/wifiservice_ndk.stamp
 build xdevice: phony obj/test/xdevice/xdevice.stamp
-build zr_env_det: phony ./libs/libzr_env_det.a
+build zr_intel_brec_ver2: phony ./libs/libzr_intel_brec_ver2.a
 build applications/sample/wifi-iot/app$:app: phony obj/applications/sample/wifi-iot/app/app.stamp
 build applications/sample/wifi-iot/app: phony obj/applications/sample/wifi-iot/app/app.stamp
-build applications/sample/wifi-iot/app/zr_env_det$:zr_env_det: phony ./libs/libzr_env_det.a
-build applications/sample/wifi-iot/app/zr_env_det: phony ./libs/libzr_env_det.a
+build applications/sample/wifi-iot/app/zr_intel_brec_ver2$:zr_intel_brec_ver2: phony ./libs/libzr_intel_brec_ver2.a
+build applications/sample/wifi-iot/app/zr_intel_brec_ver2: phony ./libs/libzr_intel_brec_ver2.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite: phony ./libs/libhilog_lite.a
 build base/hiviewdfx/frameworks/hilog_lite/mini$:hilog_lite_ndk: phony obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp
 build base/hiviewdfx/services/hiview_lite$:hiview_lite: phony ./libs/libhiview_lite.a
@@ -145,7 +145,7 @@ build vendor/huawei/wifi-iot/hals/utils/token$:hal_token_static: phony ./libs/li
 
 build all: phony $
     obj/applications/sample/wifi-iot/app/app.stamp $
-    ./libs/libzr_env_det.a $
+    ./libs/libzr_intel_brec_ver2.a $
     ./libs/libhilog_lite.a $
     obj/base/hiviewdfx/frameworks/hilog_lite/mini/hilog_lite_ndk.stamp $
     ./libs/libhiview_lite.a $
